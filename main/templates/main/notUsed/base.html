@@ -20,7 +20,6 @@
 <!------------- BODY START ------------>
 <body class="flex-column min-vh-100">
 	<!------------- NAVBAR ------------>
-	<!-- {% include 'navigationbar.html' %} -->
 	<!-- Will use static way of changing the logo text until
 		dynamic way is discovered. Q: Can I Put The Header Snippet In Its Own File And Still Change The Text Of The Logo? -->
 	<nav class="navbar navbar-expand-lg">
@@ -35,35 +34,10 @@
 				<span class="logo__cursor"></span>
 			</div>
 		</a>
-		<!-- Hamburger icon -->
-      	<input class="side-menu" type="checkbox" id="side-menu"/>
-      	<label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
-		<ul class="menu">
-			<li><a 
-			class="nav-link {{ 'nav-link--active' if active_page == 'home' else 'text-muted' }}" 
-			href="/">Home</a></li>
-			<li><a 
-			class="nav-link {{ 'nav-link--active' if active_page == 'about' else 'text-muted' }}" 
-			href="/about">About</a></li>
-			<li><a 
-			class="nav-link {{ 'nav-link--active' if active_page == 'blog' else 'text-muted' }}" 
-			href="/blog">Blog</a></li>
-			<li><a 
-			type="button"
-			class="nav-link text-muted" 
-			data-toggle="modal" 
-			data-target="#modalContact"
-			onclick="document.getElementById('modalContact').style.display='flex'"
-			>Contact</a></li>
-			<li><a 
-			class="nav-link {{ 'nav-link--active' if active_page == 'projects' else 'text-muted' }}"  
-			href="/projects">Projects</a></li>
-		</ul>
 	</div>
 	</nav>
 </nav>
 	<!------------- CONTACT MODAL ------------>
-	{% include 'contactModal.html' %}
 
 	<!------------ MAIN BLOCK OF THE BODY ------------>
 	<main class="content flex-fill">
@@ -72,7 +46,7 @@
 		{% endblock %}
 	</main>
 	<!------------ START OF THE FOOTER ------------>
-	{% include 'footer.html' %}
+	{% include 'main/footer.html' %}
 
 	<!------------ JAVASCRIPT ------------>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
