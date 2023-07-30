@@ -29,7 +29,7 @@ urlpatterns = [
     path('portfolio/', main_views.portfolio, name='portfolio'),
     path('blog/', main_views.blog, name='blog'),
     path('services/', main_views.services, name='services'),
-    path('contact/', main_views.services, name='contact'),
+    path('contact/', main_views.contact, name='contact'),
 ]
 
 if settings.DEBUG:
