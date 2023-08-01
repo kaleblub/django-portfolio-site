@@ -21,15 +21,20 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from main import views as main_views
+from about import views as about_views
+from blog import views as blog_views
+from contact import views as contact_views
+from projects import views as projects_views
+# from services import views as services_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', main_views.home, name='home'),
-    path('about/', main_views.about, name='about'),
-    path('portfolio/', main_views.portfolio, name='portfolio'),
-    path('blog/', main_views.blog, name='blog'),
+    path('about/', about_views.about, name='about'),
+    path('portfolio/', projects_views.portfolio, name='portfolio'),
+    path('blog/', blog_views.blog, name='blog'),
     path('services/', main_views.services, name='services'),
-    path('contact/', main_views.contact, name='contact'),
+    path('contact/', contact_views.contact, name='contact'),
 ]
 
 if settings.DEBUG:
