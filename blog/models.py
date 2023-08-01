@@ -1,3 +1,19 @@
 from django.db import models
+from django.utils import timezone
 
-# Create your models here.
+
+class Tag(models.Model):
+	name = models.CharField(max_length=50, unique=True)
+
+class Post(models.Model):
+	title = models.CharField(max_length=100)
+	summary = models.CharField(max_length=100)
+	author = models.CharField(max_length=20)
+	date_posted = models.DateTimeField(default=timezone.now)
+	content = models.TextField()
+
+	def __str__(self):
+		return self.title
+
+	# def get_absolute_url(self):
+	# 	return reverse('post-dettail')
