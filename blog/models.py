@@ -8,7 +8,8 @@ class Tag(models.Model):
 class Post(models.Model):
 	title = models.CharField(max_length=100)
 	summary = models.CharField(max_length=100)
-	author = models.CharField(max_length=20)
+	tags = models.ManyToManyField(Tag)
+	author = models.CharField(max_length=20, default="Kaleb Humpal")
 	date_posted = models.DateTimeField(default=timezone.now)
 	content = models.TextField()
 
