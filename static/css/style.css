@@ -522,7 +522,7 @@ ol {
 -----------------------*/
 .work {
   overflow: hidden;
-  background: #100028;
+  background: #1c2541;
 }
 
 .work__gallery {
@@ -615,7 +615,7 @@ ol {
   Counter
 -----------------------*/
 .counter {
-  background: #100028;
+  background: #1c2541;
   height: 840px;
   padding-top: 380px;
   overflow: hidden;
@@ -783,7 +783,7 @@ ol {
   Latest
 -----------------------*/
 .latest {
-  background: #100028;
+  background: #1c2541;
   padding-bottom: 80px;
 }
 
@@ -825,7 +825,7 @@ ol {
 }
 .callto.sp__callto {
   padding-top: 0;
-  background: #100028;
+  background: #1c2541;
 }
 
 .callto__text h2 {
@@ -858,7 +858,7 @@ ol {
   Footer
 -----------------------*/
 .footer {
-  background: #0a0119;
+  background: #0b132b;
 }
 
 .footer__top {
@@ -1028,7 +1028,7 @@ ol {
   About
 -----------------------*/
 .about {
-  background: #100028;
+  background: #1c2541;
   padding-bottom: 150px;
 }
 
@@ -1129,7 +1129,7 @@ ol {
   Services
 -----------------------*/
 .services {
-  background: #100028;
+  background: #1c2541;
   padding-bottom: 60px;
   padding-top: 110px;
 }
@@ -1181,7 +1181,7 @@ ol {
   Services Page
 -----------------------*/
 .services-page {
-  background: #100028;
+  background: #1c2541;
   padding-bottom: 50px;
 }
 
@@ -1189,7 +1189,7 @@ ol {
   Logo
 -----------------------*/
 .logo {
-  background: #100028;
+  background: #1c2541;
   padding: 100px 20px;
 }
 
@@ -1202,7 +1202,7 @@ ol {
   Portfolio
 -----------------------*/
 .portfolio {
-  background: #100028;
+  background: #1c2541;
 }
 
 .portfolio__filter {
@@ -1359,7 +1359,7 @@ ol {
 }
 .blog__item:hover {
   border: 1px solid transparent !important;
-  background: url(../img/blog/blog-2.jpg) no-repeat;
+  background: url(../img/images/html-css-collage-concept.jpg) no-repeat;
   background-size: cover;
 }
 .blog__item:hover ul li {

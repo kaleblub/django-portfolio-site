@@ -32,7 +32,7 @@ urlpatterns = [
     path('', main_views.home, name='home'),
     path('about/', about_views.about, name='about'),
     path('portfolio/', projects_views.portfolio, name='portfolio'),
-    path('blog/', blog_views.blog, name='blog'),
+    path('blog/', blog_views.BlogHome.as_view(), name='blog'),
     path('services/', main_views.services, name='services'),
     path('contact/', contact_views.contact, name='contact'),
 ]
