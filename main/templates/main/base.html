@@ -37,9 +37,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-2">
-                    <div class="header__logo">
-                        <a href="{% url 'home' %}"><img src="{% static 'img/logoipsum-257.svg' %}" alt=""></a>
+                    <div id="logo">
+                        <img src="{% static 'img/KHlogo1.svg' %}" draggable="false" />
+                        <img src="{% static 'img/KHlogo2.svg' %}" draggable="false" />
+                        <img src="{% static 'img/KHlogo3.svg' %}" draggable="false" />
+                        <img src="{% static 'img/KHlogo4.svg' %}" draggable="false" />
+                        <img src="{% static 'img/KHlogo5.svg' %}" draggable="false" />
+                        <img src="{% static 'img/KHlogo6.svg' %}" draggable="false" />
+
                     </div>
+<!--                     <div class="header__logo">
+                        <a href="{% url 'home' %}"><img src="{% static 'img/logoipsum-257.svg' %}" alt=""></a>
+                    </div> -->
                 </div>
                 <div class="col-lg-10">
                     <div class="header__nav__option">
@@ -54,11 +63,9 @@
                             </ul>
                         </nav>
                         <div class="header__nav__social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                            <a href="https://github.com/kaleblub"><i class="fa fa-github"></i></a>
+                                <a href="https://www.linkedin.com/in/kaleb-humpal-52a481200/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BMFqRQLlTQJe4k6APSVjyww%3D%3D"><i class="fa fa-linkedin"></i></a>
+                                <a href="https://stackoverflow.com/users/14511836/kaleblub?tab=profile"><i class="fa fa-stack-overflow"></i></a>
                         </div>
                     </div>
                 </div>
@@ -79,10 +86,18 @@
         <div class="container">
             <div class="footer__top">
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                        <div class="footer__top__logo">
-                            <a href="{% url 'home' %}"><img src="{% static 'img/logoipsum-257.svg' %}" alt=""></a>
+                    <div class="col-lg-6 col-md-6">   
+                        <div id="logo">
+                            <img src="{% static 'img/KHlogo1.svg' %}" draggable="false" />
+                            <img src="{% static 'img/KHlogo2.svg' %}" draggable="false" />
+                            <img src="{% static 'img/KHlogo3.svg' %}" draggable="false" />
+                            <img src="{% static 'img/KHlogo4.svg' %}" draggable="false" />
+                            <img src="{% static 'img/KHlogo5.svg' %}" draggable="false" />
+                            <img src="{% static 'img/KHlogo6.svg' %}" draggable="false" />
                         </div>
+<!--                         <div class="footer__top__logo">
+                            <a href="{% url 'home' %}"><img src="{% static 'img/logoipsum-257.svg' %}" alt=""></a>
+                        </div> -->
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <div class="footer__top__social">
@@ -169,6 +184,9 @@
     <script src="{% static 'js/masonry.pkgd.min.js' %}"></script>
     <script src="{% static 'js/jquery.slicknav.js' %}"></script>
     <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+
+    <script src="{% static 'js/logo-superpower.js' %}"></script>
+
     <script src="{% static 'js/main.js' %}"></script>
 </body>
 

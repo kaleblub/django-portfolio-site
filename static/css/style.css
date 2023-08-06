@@ -298,7 +298,7 @@ ol {
   left: 0;
   top: 0;
   width: 100%;
-  background: transparent;
+  background: #0b142ac9;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   z-index: 9;
 }
@@ -626,7 +626,7 @@ ol {
 }
 
 .counter__item {
-  background: #1a083d;
+  background: #0b142a;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
       transform: rotate(45deg);
@@ -1188,6 +1188,18 @@ ol {
 /*---------------------
   Logo
 -----------------------*/
+#logo {
+  position: relative;
+  width: 90px;
+  aspect-ratio: 1 / 1;
+  user-select: none;
+}
+
+#logo > img {
+  width: 100%;
+  position: absolute;
+}
+
 .logo {
   background: #1c2541;
   padding: 100px 20px;
@@ -1347,7 +1359,7 @@ ol {
     Blog
 -----------------------*/
 .blog {
-  background: #100028;
+  background: #1c2541;
 }
 
 .blog__item {
@@ -1462,7 +1474,7 @@ ol {
   Blog Details
 -----------------------*/
 .blog-details {
-  background: #100028;
+  background: #1c2541;
 }
 
 .blog__details__text {
@@ -1679,7 +1691,7 @@ ol {
   Contact Widget
 -----------------------*/
 .contact-widget {
-  background: #100028;
+  background: #1c2541;
   padding-bottom: 70px;
 }
 
@@ -1720,7 +1732,7 @@ ol {
   Contact
 -----------------------*/
 .contact {
-  background: #100028;
+  background: #1c2541;
   padding-top: 0;
   overflow: hidden;
 }
