@@ -373,7 +373,7 @@ ol {
 }
 .header__nav__menu ul li a {
   font-size: 15px;
-  font-family: "Play", sans-serif;
+  font-family: monospace;
   color: #ffffff;
   display: block;
   text-transform: uppercase;
@@ -1295,16 +1295,20 @@ ol {
   position: relative;
   z-index: 1;
   margin-bottom: 45px;
+  /* Overlay effect *//*
+  overflow: hidden;
+  transition: background-color 0.3 ease-in-out;*/
 }
 .blog__item:hover {
   border: 1px solid transparent !important;
+  background-color: rgba(0,0,0,0.8);
   background: url(../img/images/html-css-collage-concept.jpg) no-repeat;
   background-size: cover;
 }
-.blog__item:hover ul li {
-  color: #ffffff;
-}
-.blog__item:hover p {
+.blog__item:hover ul li,
+.blog__item:hover p, 
+.blog__item:hover h4,
+.blog__item:hover a {
   color: #ffffff;
 }
 .blog__item h4 {
@@ -1314,10 +1318,11 @@ ol {
   margin-bottom: 18px;
 }
 .blog__item ul {
+  color: #ffffff;
   margin-bottom: 20px;
 }
 .blog__item ul li {
-  color: #777777;
+  color: #ffffff;
   list-style: none;
   font-size: 14px;
   font-weight: 300;
@@ -1338,13 +1343,14 @@ ol {
   display: none;
 }
 .blog__item p {
+  color: #ffffff;
   font-weight: 300;
   line-height: 29px;
   margin-bottom: 22px;
 }
 .blog__item a {
-  font-size: 16px;
   color: #ffffff;
+  font-size: 16px;
 }
 .blog__item a span {
   font-size: 16px;

@@ -31,7 +31,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', main_views.home, name='home'),
     path('about/', about_views.about, name='about'),
-    path('portfolio/', projects_views.portfolio, name='portfolio'),
+    path('portfolio/', projects_views.PortfolioHome.as_view(), name='portfolio'),
     path('blog/', blog_views.BlogHome.as_view(), name='blog'),
     path('services/', main_views.services, name='services'),
     path('contact/', contact_views.contact, name='contact'),
@@ -39,3 +39,4 @@ urlpatterns = [
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
