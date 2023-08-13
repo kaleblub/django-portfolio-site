@@ -4,47 +4,20 @@
 
 <!-- Hero Section Begin -->
 <section class="hero">
-    <div class="hero__slider owl-carousel">
-        <div class="hero__item set-bg" data-setbg="{% static 'img/images/person-with-futuristic-metaverse-avatar-mask.jpg' %}">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="hero__text">
-                            <span>For software and web development</span>
-                            <h2>Kaleb Humpal’s Portfolio</h2>
-                            <a href="{% url 'portfolio' %}" class="primary-btn">See my work</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="hero__item set-bg" data-setbg="{% static 'img/images/medium-shot-man-working-computer.jpg' %}">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="hero__text" style="background: #0000056">
-                            <span>For software and web development</span>
-                            <h2>Kaleb Humpal’s Blog</h2>
-                            <a href="{% url 'blog' %}" class="primary-btn">See my articles</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="hero__item set-bg" data-setbg="{% static 'img/images/negative-space-mac-laptop-top-down-glow.jpg' %}">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="hero__text">
-                            <span>For website and video editing</span>
-                            <h2>Contact Kaleb Humpal</h2>
-                            <a href="{% url 'contact' %}" class="primary-btn">Contact me here</a>
+                            <span>Software Engineer / Fullstack Engineer</span>
+                            <h2>I am Kaleb Humpal</h2>
+                            <a href="{% url 'contact' %}" class="primary-btn">See Kaleb's Works</a>
+                            <a href="{% url 'contact' %}" class="primary-btn">Download Kaleb's Resume</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 </section>
 <!-- Hero Section End -->
 
@@ -112,59 +85,26 @@
 <!-- Services Section End -->
 
 <!-- Work Section Begin -->
-<section class="work">
-    <div class="work__gallery">
-        <div class="grid-sizer"></div>
-        <div class="work__item wide__item set-bg" data-setbg="{% static 'img/work/work-1.jpg' %}">
-            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i
-                    class="fa fa-play"></i></a>
-            <div class="work__item__hover">
-                <h4>VIP Auto Tires & Service</h4>
-                <ul>
-                    <li>eCommerce</li>
-                    <li>Magento</li>
-                </ul>
+<section class="work spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="services__title">
+                    <div class="section-title">
+                        <span>Feature Projects</span>
+                        <h2>What I do?</h2>
+                    </div>
+                    <p>If you hire a videographer of our team you will get a video professional to make a custom
+                        video for your business and, once the project is over.</p>
+                    <a href="{% url 'services' %}" class="primary-btn">See All of Kaleb's Past Works</a>
+                </div>
             </div>
-        </div>
-        <div class="work__item small__item set-bg" data-setbg="{% static 'img/work/work-2.jpg' %}">
-            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i
-                    class="fa fa-play"></i></a>
-        </div>
-        <div class="work__item small__item set-bg" data-setbg="{% static 'img/work/work-3.jpg' %}">
-            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i
-                    class="fa fa-play"></i></a>
-        </div>
-        <div class="work__item large__item set-bg" data-setbg="{% static 'img/work/work-4.jpg' %}">
-            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i
-                    class="fa fa-play"></i></a>
-            <div class="work__item__hover">
-                <h4>VIP Auto Tires & Service</h4>
-                <ul>
-                    <li>eCommerce</li>
-                    <li>Magento</li>
-                </ul>
-            </div>
-        </div>
-        <div class="work__item small__item set-bg" data-setbg="{% static 'img/work/work-5.jpg' %}">
-            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i
-                    class="fa fa-play"></i></a>
-        </div>
-        <div class="work__item small__item set-bg" data-setbg="{% static 'img/work/work-6.jpg' %}">
-            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i
-                    class="fa fa-play"></i></a>
-        </div>
-        <div class="work__item wide__item set-bg" data-setbg="{% static 'img/work/work-7.jpg' %}">
-            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i
-                    class="fa fa-play"></i></a>
-            <div class="work__item__hover">
-                <h4>VIP Auto Tires & Service</h4>
-                <ul>
-                    <li>eCommerce</li>
-                    <li>Magento</li>
-                </ul>
+            <div class="col-lg-8">
             </div>
         </div>
     </div>
+
+
 </section>
 <!-- Work Section End -->
 
@@ -215,181 +155,32 @@
 </section>
 <!-- Counter Section End -->
 
-<!-- Team Section Begin -->
-<!-- <section class="team spad set-bg" data-setbg="{% static 'img/team-bg.jpg' %}">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="section-title team__title">
-                    <span>Nice to meet</span>
-                    <h2>OUR Team</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-6 p-0">
-                <div class="team__item set-bg" data-setbg="{% static 'img/team/team-1.jpg' %}">
-                    <div class="team__item__text">
-                        <h4>AMANDA STONE</h4>
-                        <p>Videographer</p>
-                        <div class="team__item__social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 p-0">
-                <div class="team__item team__item--second set-bg" data-setbg="{% static 'img/team/team-2.jpg' %}">
-                    <div class="team__item__text">
-                        <h4>AMANDA STONE</h4>
-                        <p>Videographer</p>
-                        <div class="team__item__social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 p-0">
-                <div class="team__item team__item--third set-bg" data-setbg="{% static 'img/team/team-3.jpg' %}">
-                    <div class="team__item__text">
-                        <h4>AMANDA STONE</h4>
-                        <p>Videographer</p>
-                        <div class="team__item__social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 p-0">
-                <div class="team__item team__item--four set-bg" data-setbg="{% static 'img/team/team-4.jpg' %}">
-                    <div class="team__item__text">
-                        <h4>AMANDA STONE</h4>
-                        <p>Videographer</p>
-                        <div class="team__item__social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-12 p-0">
-                <div class="team__btn">
-                    <a href="#" class="primary-btn">Meet Our Team</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
-<!-- Team Section End -->
-
 <!-- Latest Blog Section Begin -->
 <section class="latest spad">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="section-title center-title">
-                    <span>Our Blog</span>
+                    <span>Kaleb's Blog</span>
                     <h2>Blog Update</h2>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="latest__slider owl-carousel">
+                {% for post in recent_posts %}
                 <div class="col-lg-4">
                     <div class="blog__item latest__item">
-                        <h4>What Makes Users Want to Share a Video on Social Media?</h4>
+                        <h4>{{ post.title }}</h4>
                         <ul>
-                            <li>Jan 03, 2020</li>
-                            <li>05 Comment</li>
+                            <li>{{ post.date_posted }}</li>
+                            <!-- <li>MAYBE LIKES HERE?</li> -->
                         </ul>
-                        <p>We recently launched a new website for a Vital client and wanted to share some of the
-                            cool features we were able...</p>
-                        <a href="#">Read more <span class="arrow_right"></span></a>
+                        <p>{{ post.summary }}</p>
+                        <a href="#">Read more <span class="arrow_right"></a>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="blog__item latest__item">
-                        <h4>Bumper Ads: How to Tell a Story in 6 Seconds</h4>
-                        <ul>
-                            <li>Jan 03, 2020</li>
-                            <li>05 Comment</li>
-                        </ul>
-                        <p>We recently launched a new website for a Vital client and wanted to share some of the
-                            cool features we were able...</p>
-                        <a href="#">Read more <span class="arrow_right"></span></a>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="blog__item latest__item">
-                        <h4>What Makes Users Want to Share a Video on Social Media?</h4>
-                        <ul>
-                            <li>Jan 03, 2020</li>
-                            <li>05 Comment</li>
-                        </ul>
-                        <p>We recently launched a new website for a Vital client and wanted to share some of the
-                            cool features we were able...</p>
-                        <a href="#">Read more <span class="arrow_right"></span></a>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="blog__item latest__item">
-                        <h4>Bumper Ads: How to Tell a Story in 6 Seconds</h4>
-                        <ul>
-                            <li>Jan 03, 2020</li>
-                            <li>05 Comment</li>
-                        </ul>
-                        <p>We recently launched a new website for a Vital client and wanted to share some of the
-                            cool features we were able...</p>
-                        <a href="#">Read more <span class="arrow_right"></span></a>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="blog__item latest__item">
-                        <h4>What Makes Users Want to Share a Video on Social Media?</h4>
-                        <ul>
-                            <li>Jan 03, 2020</li>
-                            <li>05 Comment</li>
-                        </ul>
-                        <p>We recently launched a new website for a Vital client and wanted to share some of the
-                            cool features we were able...</p>
-                        <a href="#">Read more <span class="arrow_right"></span></a>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="blog__item latest__item">
-                        <h4>What Makes Users Want to Share a Video on Social Media?</h4>
-                        <ul>
-                            <li>Jan 03, 2020</li>
-                            <li>05 Comment</li>
-                        </ul>
-                        <p>We recently launched a new website for a Vital client and wanted to share some of the
-                            cool features we were able...</p>
-                        <a href="#">Read more <span class="arrow_right"></span></a>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="blog__item latest__item">
-                        <h4>What Makes Users Want to Share a Video on Social Media?</h4>
-                        <ul>
-                            <li>Jan 03, 2020</li>
-                            <li>05 Comment</li>
-                        </ul>
-                        <p>We recently launched a new website for a Vital client and wanted to share some of the
-                            cool features we were able...</p>
-                        <a href="#">Read more <span class="arrow_right"></span></a>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>

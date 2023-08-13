@@ -19,7 +19,7 @@
 4.  Hero Section
 5.  Services Section
 6.  Counter Section
-7.  Team Section
+7.  Team Section REMOVED
 8.  Latest Section
 9.  Contact
 10.  Footer Style
@@ -423,10 +423,15 @@ ol {
   display: none;
 }
 
+.glitch-text {
+  font-family: monospace;
+}
+
+
 /*---------------------
   Hero
 -----------------------*/
-.hero__slider.owl-carousel .owl-item.active .hero__text span {
+/*.hero__slider.owl-carousel .owl-item.active .hero__text span {
   top: 0;
   opacity: 1;
 }
@@ -437,8 +442,8 @@ ol {
 .hero__slider.owl-carousel .owl-item.active .hero__text .primary-btn {
   top: 0;
   opacity: 1;
-}
-.hero__slider.owl-carousel .owl-dots {
+}*/
+/*.hero__slider.owl-carousel .owl-dots {
   position: absolute;
   left: 0;
   right: 0;
@@ -446,8 +451,8 @@ ol {
   width: 100%;
   max-width: 1140px;
   margin: 0 auto;
-}
-.hero__slider.owl-carousel .owl-dots button {
+}*/
+/*.hero__slider.owl-carousel .owl-dots button {
   color: #adadad;
   font-size: 18px;
   font-family: "Play", sans-serif;
@@ -474,7 +479,7 @@ ol {
 .hero__slider.owl-carousel .owl-dots button:last-child {
   margin-right: 0;
 }
-
+*/
 .hero__item {
   height: 684px;
   padding-top: 255px;
@@ -489,7 +494,6 @@ ol {
   margin-bottom: 18px;
   position: relative;
   top: 100px;
-  opacity: 0;
   -webkit-transition: all, 0.3s;
   -o-transition: all, 0.3s;
   transition: all, 0.3s;
@@ -503,7 +507,6 @@ ol {
   margin-bottom: 38px;
   position: relative;
   top: 100px;
-  opacity: 0;
   -webkit-transition: all, 0.5s;
   -o-transition: all, 0.5s;
   transition: all, 0.5s;
@@ -511,7 +514,6 @@ ol {
 .hero__text .primary-btn {
   position: relative;
   top: 100px;
-  opacity: 0;
   -webkit-transition: all, 0.7s;
   -o-transition: all, 0.7s;
   transition: all, 0.7s;
@@ -522,7 +524,7 @@ ol {
 -----------------------*/
 .work {
   overflow: hidden;
-  background: #1c2541;
+  background: linear-gradient(-45deg, #040c1c, #040d22, #051d4d, #051641);
 }
 
 .work__gallery {
@@ -615,7 +617,7 @@ ol {
   Counter
 -----------------------*/
 .counter {
-  background: #1c2541;
+  background: linear-gradient(-45deg, #040c1c, #040d22, #051d4d, #051641);
   height: 840px;
   padding-top: 380px;
   overflow: hidden;
@@ -701,89 +703,10 @@ ol {
 }
 
 /*---------------------
-  Team
------------------------*/
-.team {
-  padding-bottom: 90px;
-}
-
-.section-title.team__title {
-  margin-bottom: 90px;
-}
-
-.team__item {
-  height: 390px;
-  position: relative;
-  overflow: hidden;
-}
-.team__item:hover .team__item__text {
-  bottom: 0;
-}
-.team__item.team__item--second {
-  margin-top: -60px;
-}
-.team__item.team__item--third {
-  margin-top: -120px;
-}
-.team__item.team__item--four {
-  margin-top: -180px;
-}
-
-.team__item__text {
-  text-align: center;
-  position: absolute;
-  left: 0;
-  bottom: -500px;
-  width: 100%;
-  padding: 50px 0 30px;
-  z-index: 1;
-  -webkit-transition: all, 0.5s;
-  -o-transition: all, 0.5s;
-  transition: all, 0.5s;
-}
-.team__item__text:before {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background: url(../img/team/team-hover.png);
-  content: "";
-  z-index: -1;
-}
-.team__item__text h4 {
-  font-size: 22px;
-  color: #ffffff;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-.team__item__text p {
-  color: #ffffff;
-  font-weight: 300px;
-  margin-bottom: 12px;
-}
-.team__item__text .team__item__social a {
-  color: #ffffff;
-  display: inline-block;
-  font-size: 15px;
-  margin-right: 18px;
-}
-.team__item__text .team__item__social a:last-child {
-  margin-right: 0;
-}
-
-.team__btn {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-}
-
-/*---------------------
   Latest
 -----------------------*/
 .latest {
-  background: #1c2541;
+  background: linear-gradient(-45deg, #040c1c, #040d22, #051d4d, #051641);
   padding-bottom: 80px;
 }
 
@@ -825,7 +748,7 @@ ol {
 }
 .callto.sp__callto {
   padding-top: 0;
-  background: #1c2541;
+  background: linear-gradient(-45deg, #040c1c, #040d22, #051d4d, #051641);
 }
 
 .callto__text h2 {
@@ -1028,7 +951,11 @@ ol {
   About
 -----------------------*/
 .about {
-  background: #1c2541;
+/*  background: #1c2541; REPLACED BY EVERYWHERE THAT THIS LINEAR-GRADIENT IS AT*/
+  background: linear-gradient(-45deg, #040c1c, #040d22, #051d4d, #051641);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
   padding-bottom: 150px;
 }
 
@@ -1045,7 +972,7 @@ ol {
   padding-left: 30px;
 }
 .about__text .services__item .services__item__icon:after {
-  border-color: #281A3E;
+  border-color: #21c2e3;
 }
 
 .about__text__desc {
@@ -1129,7 +1056,7 @@ ol {
   Services
 -----------------------*/
 .services {
-  background: #1c2541;
+  background: linear-gradient(-45deg, #040c1c, #040d22, #051d4d, #051641);
   padding-bottom: 60px;
   padding-top: 110px;
 }
@@ -1181,7 +1108,7 @@ ol {
   Services Page
 -----------------------*/
 .services-page {
-  background: #1c2541;
+  background: linear-gradient(-45deg, #040c1c, #040d22, #051d4d, #051641);
   padding-bottom: 50px;
 }
 
@@ -1190,7 +1117,7 @@ ol {
 -----------------------*/
 #logo {
   position: relative;
-  width: 90px;
+  width: 80px;
   aspect-ratio: 1 / 1;
   user-select: none;
 }
@@ -1201,7 +1128,7 @@ ol {
 }
 
 .logo {
-  background: #1c2541;
+  background: linear-gradient(-45deg, #040c1c, #040d22, #051d4d, #051641);
   padding: 100px 20px;
 }
 
@@ -1214,7 +1141,7 @@ ol {
   Portfolio
 -----------------------*/
 .portfolio {
-  background: #1c2541;
+  background: linear-gradient(-45deg, #040c1c, #040d22, #051d4d, #051641);
 }
 
 .portfolio__filter {
@@ -1359,7 +1286,7 @@ ol {
     Blog
 -----------------------*/
 .blog {
-  background: #1c2541;
+  background: linear-gradient(-45deg, #040c1c, #040d22, #051d4d, #051641);
 }
 
 .blog__item {
@@ -1474,7 +1401,7 @@ ol {
   Blog Details
 -----------------------*/
 .blog-details {
-  background: #1c2541;
+  background: linear-gradient(-45deg, #040c1c, #040d22, #051d4d, #051641);
 }
 
 .blog__details__text {
@@ -1691,7 +1618,7 @@ ol {
   Contact Widget
 -----------------------*/
 .contact-widget {
-  background: #1c2541;
+  background: linear-gradient(-45deg, #040c1c, #040d22, #051d4d, #051641);
   padding-bottom: 70px;
 }
 
@@ -1732,7 +1659,7 @@ ol {
   Contact
 -----------------------*/
 .contact {
-  background: #1c2541;
+  background: linear-gradient(-45deg, #040c1c, #040d22, #051d4d, #051641);
   padding-top: 0;
   overflow: hidden;
 }
@@ -1880,23 +1807,6 @@ ol {
     padding-bottom: 70px;
   }
 
-  .team__item.team__item--second {
-    margin-top: 0;
-  }
-
-  .team__item.team__item--third {
-    margin-top: 0;
-  }
-
-  .team__item.team__item--four {
-    margin-top: 0;
-  }
-
-  .team__btn {
-    position: relative;
-    padding-top: 50px;
-  }
-
   .about__pic {
     margin-bottom: 50px;
   }
@@ -1999,23 +1909,6 @@ ol {
     height: auto;
     padding-top: 100px;
     padding-bottom: 70px;
-  }
-
-  .team__item.team__item--second {
-    margin-top: 0;
-  }
-
-  .team__item.team__item--third {
-    margin-top: 0;
-  }
-
-  .team__item.team__item--four {
-    margin-top: 0;
-  }
-
-  .team__btn {
-    position: relative;
-    padding-top: 50px;
   }
 
   .about__pic {
@@ -2124,14 +2017,6 @@ ol {
     margin-bottom: 40px;
   }
 
-  .team__item {
-    margin-bottom: 20px;
-  }
-
-  .team .p-0 {
-    padding: 0 15px !important;
-  }
-
   .about__pic__item {
     margin-right: 0;
   }
@@ -2178,5 +2063,17 @@ ol {
 
   .blog__details__quote {
     padding: 30px 40px 35px 35px;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }

@@ -1,7 +1,14 @@
 from django.shortcuts import render
+# from projects.models import Project
+from blog.models import Post
 
 def home(request):
-	return render(request, 'main/home.html')
+	recent_posts = Post.objects.order_by('-date_posted')[:6]
+
+	context = {
+		'recent_posts': recent_posts,
+	}
+	return render(request, 'main/home.html', context)
 
 def services(request):
 	return render(request, 'main/services.html')
