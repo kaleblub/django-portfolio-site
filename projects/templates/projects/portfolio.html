@@ -26,20 +26,23 @@
         <div class="row">
             <div class="col-lg-12">
                 <ul id="language-filter" class="portfolio__filter">
-                    <li class="active" data-filter="*">All</li>
+                    <li class="active" data-filter="all">All</li>
                     {% for language in languages %}
-                        <li data-filter="{{ language.name }}">{{ language.name }}</li>
+                        <li data-filter=".{{ language.name }}">{{ language.name }}</li>
                     {% endfor %}
                 </ul>
             </div>
         </div>
         <div id="project-list" class="row portfolio__gallery">
             {% for project in projects %}
-            <div class="col-lg-4 col-md-6 col-sm-6 mix project-item" data-languages="{{ project.languages_used.all|join:',' }}">
+            <div class="col-lg-4 col-md-6 col-sm-6 mix project-item {{ project.languages_used.all|join:' ' }}" data-languages="{{ project.languages_used.all|join:',' }}" data-image="{{ project.cover_image.url }}">
                 <div class="portfolio__item">
                     <<!-- div class="portfolio__item__video set-bg" data-setbg="{{ project.cover_image.url }}">
                     </div> -->
-                    <img src="{{ project.cover_image.url }}" alt="{{ project.name }} Cover Image">
+                    <div class="portfolio__item__container">
+                        <img class="default-image" src="{% static 'img/icons/pythonLogo.png' %}" alt="Default Image">
+                        <img class="hover-image" src="{{ project.cover_image.url }}" alt="{{ project.name }} Cover Image">
+                    </div>
                     <div class="portfolio__item__text">
                         <h4>{{ project.name }}</h4>
                         <p>{{ project.short_summary }}</p>
@@ -180,25 +183,19 @@
 <!-- Portfolio Section End -->
 <script type="text/javascript">
 const languageFilter = document.getElementById('language-filter');
-const projectList = document.getElementById('project-list');
-const projectItems = projectList.querySelectorAll('.project-item');
 
 languageFilter.addEventListener('click', function(event) {
     if (event.target.tagName === 'LI') {
         const selectedFilter = event.target.getAttribute('data-filter');
-        projectItems.forEach(item => {
-            const languages = item.getAttribute('data-languages').split(',');
-            const imageUrl = item.getAttribute('data-image');
-            const imgElement = item.querySelector('img');
-            if (selectedFilter === 'all' || languages.includes(selectedFilter)) {
-                item.style.display = 'block';
-                imgElement.src = imageUrl; // Set the image source
-            } else {
-                item.style.display = 'none';
-            }
-        });
+        mixer.filter(selectedFilter); // Apply the filter
     }
 });
+
+
+
+
+
+
 
 </script>
 {% endblock content %}

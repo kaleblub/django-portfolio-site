@@ -1171,29 +1171,29 @@ ol {
   opacity: 1;
 }
 
-.portfolio__item__video {
-  height: 240px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 28px;
+.portfolio__item__container {
+  position: relative;
+  overflow: hidden;
 }
-.portfolio__item__video .play-btn {
-  display: inline-block;
-  color: #ffffff;
-  font-size: 20px;
-  height: 50px;
-  width: 50px;
-  line-height: 50px;
-  text-align: center;
-  border: 1px solid rgba(255, 255, 255, 0.7);
-  border-radius: 50%;
+
+.default-image,
+.hover-image {
+  transition: opacity 0.3s ease;
+}
+
+.hover-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.portfolio__item:hover .default-image {
+  opacity: 0;
+}
+
+.portfolio__item:hover .hover-image {
+  opacity: 1;
 }
 
 .portfolio__item__text {
