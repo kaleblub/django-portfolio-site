@@ -229,8 +229,8 @@ ol {
   width: 100%;
 }
 
-/* Preloder */
-#preloder {
+/* Preloader */
+#preloader {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -290,6 +290,33 @@ ol {
     border-left-color: transparent;
   }
 }
+
+/*------------------
+  Rotating Gradient Background Animation
+---------------------*/
+
+.bg-gradient-animate {
+  background: #040f29;
+
+  /*background: linear-gradient(-45deg, #040c1c, #040d22, #051d4d, #051641);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;*/
+}
+/*@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}*/
+
+
+
 /*---------------------
   Header
 -----------------------*/
@@ -524,7 +551,7 @@ ol {
 -----------------------*/
 .work {
   overflow: hidden;
-  background: linear-gradient(-45deg, #040c1c, #040d22, #051d4d, #051641);
+  
 }
 
 .work__gallery {
@@ -617,7 +644,7 @@ ol {
   Counter
 -----------------------*/
 .counter {
-  background: linear-gradient(-45deg, #040c1c, #040d22, #051d4d, #051641);
+  
   height: 840px;
   padding-top: 380px;
   overflow: hidden;
@@ -706,7 +733,7 @@ ol {
   Latest
 -----------------------*/
 .latest {
-  background: linear-gradient(-45deg, #040c1c, #040d22, #051d4d, #051641);
+  
   padding-bottom: 80px;
 }
 
@@ -748,7 +775,7 @@ ol {
 }
 .callto.sp__callto {
   padding-top: 0;
-  background: linear-gradient(-45deg, #040c1c, #040d22, #051d4d, #051641);
+  
 }
 
 .callto__text h2 {
@@ -952,7 +979,7 @@ ol {
 -----------------------*/
 .about {
 /*  background: #1c2541; REPLACED BY EVERYWHERE THAT THIS LINEAR-GRADIENT IS AT*/
-  background: linear-gradient(-45deg, #040c1c, #040d22, #051d4d, #051641);
+  
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   height: 100vh;
@@ -1056,7 +1083,7 @@ ol {
   Services
 -----------------------*/
 .services {
-  background: linear-gradient(-45deg, #040c1c, #040d22, #051d4d, #051641);
+  
   padding-bottom: 60px;
   padding-top: 110px;
 }
@@ -1108,7 +1135,7 @@ ol {
   Services Page
 -----------------------*/
 .services-page {
-  background: linear-gradient(-45deg, #040c1c, #040d22, #051d4d, #051641);
+  
   padding-bottom: 50px;
 }
 
@@ -1128,7 +1155,7 @@ ol {
 }
 
 .logo {
-  background: linear-gradient(-45deg, #040c1c, #040d22, #051d4d, #051641);
+  
   padding: 100px 20px;
 }
 
@@ -1141,7 +1168,7 @@ ol {
   Portfolio
 -----------------------*/
 .portfolio {
-  background: linear-gradient(-45deg, #040c1c, #040d22, #051d4d, #051641);
+  
 }
 
 .portfolio__filter {
@@ -1378,8 +1405,58 @@ svg {
     Blog
 -----------------------*/
 .blog {
-  background: linear-gradient(-45deg, #040c1c, #040d22, #051d4d, #051641);
+  
 }
+
+.posts {
+  margin: 20px auto;
+  max-width: 800px;
+  padding: 20px;
+  text-align: left;
+  width: 100%; }
+  .posts .posts-group {
+    display: flex;
+    line-height: normal;
+    margin-bottom: 1.9em; }
+  .posts .post-year {
+    font-size: 2em;
+    margin-right: 1.8em;
+    opacity: 0.6;
+    padding-top: 6px; }
+  .posts .posts-list {
+    flex-grow: 1;
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+  .posts .post-item {
+    border-bottom: 1px dashed grey; }
+  .posts a {
+    align-items: baseline;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    text-decoration: none; }
+  .posts a:hover {
+    color: #d01d57;
+    text-shadow: 0 0 1rem #237A57; }
+  .posts .hvr-grow {
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    -webkit-transition-duration: 0.75s;
+    transition-duration: 0.75s;
+    -webkit-transition-property: transform;
+    transition-property: transform; }
+  .posts .hvr-grow:hover, .posts .hvr-grow:focus, .posts .hvr-grow:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); }
+  .posts .post-title {
+    font-size: 1rem;
+    margin: 5px 0; }
+  .posts .post-day {
+    flex-shrink: 0;
+    margin-left: 1em; }
+
 
 .blog__item {
   border: 1px solid #222222;
@@ -1499,7 +1576,7 @@ svg {
   Blog Details
 -----------------------*/
 .blog-details {
-  background: linear-gradient(-45deg, #040c1c, #040d22, #051d4d, #051641);
+  
 }
 
 .blog__details__text {
@@ -1568,7 +1645,7 @@ svg {
   font-weight: 300;
   margin-right: 25px;
 }
-.blog__details__tags a {
+.blog__details__tags ul > li {
   font-size: 16px;
   font-weight: 300;
   color: #ffffff;
@@ -1716,7 +1793,7 @@ svg {
   Contact Widget
 -----------------------*/
 .contact-widget {
-  background: linear-gradient(-45deg, #040c1c, #040d22, #051d4d, #051641);
+  
   padding-bottom: 70px;
 }
 
@@ -1757,7 +1834,7 @@ svg {
   Contact
 -----------------------*/
 .contact {
-  background: linear-gradient(-45deg, #040c1c, #040d22, #051d4d, #051641);
+  
   padding-top: 0;
   overflow: hidden;
 }
@@ -1861,6 +1938,16 @@ svg {
 }
 /* Tablet Device = 768px */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+    
+  .header {
+    min-height: 80px;
+  }
+
+  #logo {
+    width: 66px;
+    top: 13px;
+  }
+
   .hero__slider.owl-carousel .owl-dots {
     max-width: 690px !important;
   }
@@ -1959,8 +2046,9 @@ svg {
   .slicknav_btn {
     position: absolute;
     right: 10px;
-    top: 26px;
-    background: #00bfe7;
+    top: 20px;
+    background: transparent;
+/*    background: #00bfe7;*/
   }
 
   .header .container {
@@ -1973,6 +2061,16 @@ svg {
 }
 /* Wide Mobile = 480px */
 @media only screen and (max-width: 767px) {
+  
+  .header {
+    min-height: 75px;
+  }
+
+  #logo {
+    width: 60px;
+    top: 13px;
+  }
+
   .services__title {
     margin-bottom: 50px;
   }
@@ -2058,14 +2156,15 @@ svg {
   }
 
   .slicknav_nav {
-    background: #222222;
+/*    background: #222222;*/
   }
 
   .slicknav_btn {
     position: absolute;
     right: 10px;
-    top: 26px;
-    background: #00bfe7;
+    top: 16px;
+    background: transparent;
+/*    background: #00bfe7;*/
   }
 
   .header .container {

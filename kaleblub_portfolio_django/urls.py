@@ -33,6 +33,7 @@ urlpatterns = [
     path('about/', about_views.about, name='about'),
     path('portfolio/', projects_views.PortfolioHome.as_view(), name='portfolio'),
     path('blog/', blog_views.BlogHome.as_view(), name='blog'),
+    path('blog/post-<int:pk>/', blog_views.PostView.as_view(), name='post-detail'),
     path('services/', main_views.services, name='services'),
     path('contact/', contact_views.contact, name='contact'),
 ]
