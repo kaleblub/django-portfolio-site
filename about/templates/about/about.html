@@ -1,9 +1,9 @@
 {% extends "main/base.html" %}
 {% load static %}
 {% block content %}
-
 <!-- Breadcrumb Begin -->
-<div class="breadcrumb-option spad finisher-header set-bg"> <!-- data-setbg="{% static 'img/images/vecteezy_abstract_glow4-No-text.jpg' %}"> -->
+<div class="breadcrumb-option spad finisher-header set-bg">
+    <!-- data-setbg="{% static 'img/images/vecteezy_abstract_glow4-No-text.jpg' %}"> -->
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
@@ -19,7 +19,6 @@
     </div>
 </div>
 <!-- Breadcrumb End -->
-
 <!-- About Section Begin -->
 <section class="about spad bg-gradient-animate">
     <div class="container">
@@ -27,9 +26,8 @@
             <div class="col-lg-6">
                 <div class="about__pic">
                     <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6">
-                            <div class="about__pic__item about__pic__item--large set-bg"
-                                data-setbg="{% static 'img/images/it-specialist-checking-code-computer-dark-office-night.jpg' %}"></div>
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <div class="about__pic__item about__pic__item--large set-bg" data-setbg="{% static 'img/who-am-i.png' %}"></div>
                         </div>
                     </div>
                 </div>
@@ -40,13 +38,16 @@
                         <span>About Kaleb Humpal</span>
                         <h2>Who am I?</h2>
                     </div>
+                    <div class="about__text__desc">
+                        <p>As a software developer, I embarked on my journey with basic web development after high school. My fascination with Python led me to dive into personal projects while studying C++ at a university in Beirut, Lebanon. However, my insatiable thirst for knowledge pushed me beyond traditional education. I'm captivated by all things computer-related and driven to continuously learn. With a passion for surpassing job goals independently, I'm always ready to confront challenges head-on, as they serve as catalysts for growth. Let's embrace the boundless possibilities that lie ahead together.</p>
+                    </div>
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="services__item">
                                 <div class="services__item__icon">
                                     <img src="{% static 'img/icons/si-3.png' %}" alt="">
                                 </div>
-                                <h4>Video distribution</h4>
+                                <h4>Download Resume</h4>
                                 <p>Whether you’re halfway through the editing process, or you.</p>
                             </div>
                         </div>
@@ -55,15 +56,10 @@
                                 <div class="services__item__icon">
                                     <img src="{% static 'img/icons/si-4.png' %}" alt="">
                                 </div>
-                                <h4>Video hosting</h4>
+                                <h4>Contact</h4>
                                 <p>Whether you’re halfway through the editing process, or you.</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="about__text__desc">
-                        <p>Formed in 2006 by Matt Hobbs and Cael Jones, Videoprah is an award-winning, full-service
-                            production company specializing in commercial, broadcast, tourism & action sport video
-                            production services has been featured.</p>
                     </div>
                 </div>
             </div>
@@ -71,7 +67,198 @@
     </div>
 </section>
 <!-- About Section End -->
-
+<!-- Skills Section Begin -->
+<section class="skills spad bg-gradient-animate">
+    <div class="container">
+        <div class="skills__content">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title team__title">
+                        <span>Estimates of my skills</span>
+                        <h2>Skills</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-12">
+                    <ul class="nav nav-pills flex-column px-0" id="pills-tab" role="tablist">
+                        <li class="nav-item mt-4 pt-2">
+                            <a type="button" class="primary-btn active" id="pills-front-end-tab" data-bs-toggle="pill" href="#pills-front-end" role="tab" aria-controls="pills-front-end" aria-selected="true">
+                                Front End
+                            </a>
+                            <!--end nav link-->
+                        </li>
+                        <!--end nav item-->
+                        <li class="nav-item mt-4 pt-2">
+                            <a class="primary-btn" id="pills-back-end-tab" data-bs-toggle="pill" href="#pills-back-end" role="tab" aria-controls="pills-back-end" aria-selected="false">
+                                Back End
+                            </a>
+                            <!--end nav link-->
+                        </li>
+                        <!--end nav item-->
+                        <li class="nav-item mt-4 pt-2">
+                            <a class="primary-btn" id="pills-etc-tab" data-bs-toggle="pill" href="#pills-etc" role="tab" aria-controls="pills-etc" aria-selected="false">
+                                Msc.
+                            </a>
+                            <!--end nav link-->
+                        </li>
+                        <!--end nav item-->
+                    </ul>
+                    <!--end nav pills-->
+                </div>
+                <!--end col-->
+                <div class="col-lg-9 col-md-8 col-12">
+                    <div class="tab-content ps-lg-4" id="pills-tabContent">
+                        <div class="skill-bars tab-pane fade active show" id="pills-front-end" role="tabpanel" aria-labelledby="pills-front-end-tab">
+                            <h4>Front-End</h4>
+                                <div class="bar">
+                                    <div class="info">
+                                        <span>HTML</span>
+                                    </div>
+                                    <div class="progress-line html">
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <div class="bar">
+                                    <div class="info">
+                                        <span>CSS</span>
+                                    </div>
+                                    <div class="progress-line css">
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <div class="bar">
+                                    <div class="info">
+                                        <span>Javascript</span>
+                                    </div>
+                                    <div class="progress-line javascript">
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <ul class="yearline" title="Yrs">
+                                    <li class="year-half"></li>
+                                    <li data-years="1"></li>
+                                    <li class="year-half"></li>
+                                    <li data-years="2"></li>
+                                    <li class="year-half"></li>
+                                    <li data-years="3"></li>
+                                    <li class="year-half"></li>
+                                    <li data-years="4"></li>
+                                </ul>
+                            </div>
+                            <div class="skill-bars tab-pane fade" id="pills-back-end" role="tabpanel" aria-labelledby="pills-back-end-tab">
+                                <h4>Back-End</h4>
+                                    <div class="bar">
+                                        <div class="info">
+                                            <span>Python</span>
+                                        </div>
+                                        <div class="progress-line python">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                    <div class="bar">
+                                        <div class="info">
+                                            <span>Django</span>
+                                        </div>
+                                        <div class="progress-line django">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                    <div class="bar">
+                                        <div class="info">
+                                            <span>Flask</span>
+                                        </div>
+                                        <div class="progress-line flask">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                    <div class="bar">
+                                        <div class="info">
+                                            <span>SQL</span>
+                                        </div>
+                                        <div class="progress-line sql">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                        <div class="bar">
+                                        <div class="info">
+                                            <span>ORM</span>
+                                        </div>
+                                        <div class="progress-line sql">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                    <div class="bar">
+                                        <div class="info">
+                                            <span>C++</span>
+                                        </div>
+                                        <div class="progress-line cpp">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                    <ul class="yearline" title="Yrs">
+                                        <li class="year-half"></li>
+                                        <li data-years="1"></li>
+                                        <li class="year-half"></li>
+                                        <li data-years="2"></li>
+                                        <li class="year-half"></li>
+                                        <li data-years="3"></li>
+                                        <li class="year-half"></li>
+                                        <li data-years="4"></li>
+                                        <li class="year-half"></li>
+                                        <li data-years="5"></li>
+                                        <li class="year-half"></li>
+                                        <li data-years="6"></li>
+                                    </ul>
+                            </div>
+                            <!--end teb pane-->
+                            <div class="skill-bars tab-pane fade" id="pills-etc" role="tabpanel" aria-labelledby="pills-etc-tab">
+                                    <div class="bar">
+                                        <div class="info">
+                                            <span>Linux CLI</span>
+                                        </div>
+                                        <div class="progress-line linux">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                    <div class="bar">
+                                        <div class="info">
+                                            <span>Bash</span>
+                                        </div>
+                                        <div class="progress-line bash">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                    <div class="bar">
+                                        <div class="info">
+                                            <span>Project Management</span>
+                                        </div>
+                                        <div class="progress-line proj-man">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                    <ul class="yearline" title="Yrs">
+                                        <li class="year-half"></li>
+                                        <li data-years="1"></li>
+                                        <li class="year-half"></li>
+                                        <li data-years="2"></li>
+                                        <li class="year-half"></li>
+                                        <li data-years="3"></li>
+                                        <li class="year-half"></li>
+                                        <li data-years="4"></li>
+                                        <li class="year-half"></li>
+                                        <li data-years="5"></li>
+                                    </ul>
+                            </div>
+                            <!--end tab content-->
+                        </div>
+                        <!--end col-->
+                    </div> <!-- end row -->
+                </div> <!-- end col -->
+            </div>
+        </div>
+</section>
+<!-- Skills Section End -->
 <!-- Testimonial Section Begin -->
 <section class="testimonial spad set-bg" data-setbg="{% static 'img/testimonial-bg.jpg' %}">
     <div class="container">
@@ -175,7 +362,6 @@
     </div>
 </section>
 <!-- Testimonial Section End -->
-
 <!-- Counter Section Begin -->
 <section class="counter bg-gradient-animate">
     <div class="container">
@@ -222,7 +408,6 @@
     </div>
 </section>
 <!-- Counter Section End -->
-
 <!-- Team Section Begin -->
 <section class="team spad set-bg" data-setbg="{% static 'img/team-bg.jpg' %}">
     <div class="container">
@@ -277,8 +462,7 @@
                     </div>
                 </div>
             </div>
-
-<!--             <div class="col-lg-3 col-md-6 col-sm-6 p-0">
+            <!--             <div class="col-lg-3 col-md-6 col-sm-6 p-0">
                 <div class="team__item set-bg" data-setbg="{% static 'img/team/team-1.jpg' %}">
                     <div class="team__item__text">
                         <h4>AMANDA STONE</h4>
@@ -343,5 +527,4 @@
     </div>
 </section>
 <!-- Team Section End -->
-
 {% endblock content %}

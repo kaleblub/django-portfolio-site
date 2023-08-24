@@ -229,6 +229,16 @@ ol {
   width: 100%;
 }
 
+/* Overlay for images that are too bright for the text on top */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+}
+
 /* Preloader */
 #preloader {
   position: fixed;
@@ -804,6 +814,11 @@ ol {
   padding: 14px 32px 12px;
 }
 
+.callto__services {
+  position: relative;
+  background-position: center;
+}
+
 /*---------------------
   Footer
 -----------------------*/
@@ -982,7 +997,7 @@ ol {
   
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
-  height: 100vh;
+  height: auto;
   padding-bottom: 150px;
 }
 
@@ -1005,6 +1020,236 @@ ol {
 .about__text__desc {
   margin-top: -10px;
 }
+
+/*----------------------
+  Skills
+------------------------*/
+.tab-content>.active {
+    display: block;
+}
+
+.skill-bars {
+  padding: 25px 30px;
+  width: auto;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.skill-bars .bar {
+  margin: 20px 0;
+}
+
+.skill-bars .bar:first-child {
+  margin-top: 0px;
+}
+
+.skill-bars .bar .info {
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+.skill-bars .bar .info span {
+  font-weight: 500;
+  font-size: 17px;
+  opacity: 0;
+  animation: showText 0.5s 1s linear forwards;
+}
+
+@keyframes showText {
+  100% {
+    opacity: 1;
+  }
+}
+
+.skill-bars .bar .progress-line {
+  height: 10px;
+  width: 100%;
+  background: #f0f0f0;
+  position: relative;
+  transform: scaleX(0);
+  transform-origin: left;
+  border-radius: 10px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05),
+    0 1px rgba(255, 255, 255, 0.8);
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.bar .progress-line span {
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: #3a92b6;
+  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+/* Front-End */
+.bar .progress-line.html span {
+  width: 100%;
+}
+.bar .progress-line.css span {
+  width: 100%;
+}
+.bar .progress-line.javascript span {
+  width: 37.5%;
+}
+/* Back-End */
+.bar .progress-line.python span {
+  width: 100%;
+}
+.bar .progress-line.django span {
+  width: 16.6666%;
+}
+.bar .progress-line.sql span {
+  width: 25%;
+}
+.bar .progress-line.orm span {
+  width: 16.6666%;
+}
+.bar .progress-line.flask span {
+  width: 16.6666%;
+}
+.bar .progress-line.cpp span {
+  width: 16.6666%;
+}
+/* ETC */
+.bar .progress-line.linux span {
+  width: 90%;
+}
+.bar .progress-line.bash span {
+  width: 60%;
+}
+.bar .progress-line.proj-man span {
+  width: 40%;
+}
+
+.progress-line span::before {
+  position: absolute;
+  content: "";
+  top: -10px;
+  right: 0;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: #000;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+
+.progress-line span::after {
+  position: absolute;
+  top: -28px;
+  right: 0;
+  font-weight: 500;
+  background: #000;
+  color: #fff;
+  padding: 1px 8px;
+  font-size: 12px;
+  border-radius: 3px;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+
+@keyframes showText2 {
+  100% {
+    opacity: 1;
+  }
+}
+/* Front-End */
+.progress-line.html span::after {
+  content: "4yrs";
+}
+.progress-line.css span::after {
+  content: "4yrs";
+}
+.progress-line.javascript span::after {
+  content: "1.5yrs";
+}
+/* Back-End */
+.progress-line.python span::after {
+  content: "6yrs";
+}
+.progress-line.sql span::after {
+  content: "1.5yrs";
+}
+.progress-line.sql span::after {
+  content: "1.5yrs";
+}
+.progress-line.django span::after {
+  content: "1yr";
+}
+.progress-line.flask span::after {
+  content: "1yr";
+}
+.progress-line.cpp span::after {
+  content: "1yr";
+}
+/* ETC */
+.progress-line.linux span::after {
+  content: "4.5yrs";
+}
+.progress-line.bash span::after {
+  content: "3yrs";
+}
+.progress-line.proj-man span::after {
+  content: "2yrs";
+}
+
+
+
+.yearline {
+    width: 100%;
+    list-style: none;
+    text-align: justify;
+    margin-top: 1.5rem;
+    padding-left: 10%;
+}
+
+.yearline:before {
+    display: inline-block;
+    content: attr(title);
+    font-size: 15px;
+    position: absolute;
+    transform: translateX(-3.5rem) translateY(1.75rem);
+    color: #ffffff;
+}
+.yearline:after {
+    display: inline-block;
+    content: "";
+    width: 100%;
+}
+
+.yearline li {
+    display: inline-block;
+    width: 3px;
+    height: 10px;
+    background: #ffffff;
+    text-align: center;
+    position: relative;
+}
+
+.yearline li:before {
+    display: inline-block;
+    content: attr(data-years);
+    position: absolute;
+    transform: translateX(-50%);
+    bottom: -2.25rem;
+    color: #ffffff;
+}
+
+.year-half {
+    transform: translateY(-3px);
+    height: 3px !important;
+}
+
 
 /*---------------------
   Testimonial
@@ -1106,6 +1351,9 @@ ol {
   font-weight: 700;
   margin-top: 26px;
   margin-bottom: 18px;
+}
+.services__item span {
+  color: #fff;
 }
 .services__item p {
   margin-bottom: 0;
@@ -2030,17 +2278,17 @@ svg {
   .slicknav_nav .slicknav_row:hover {
     border-radius: 0;
     background: transparent;
-    color: #111111;
+    color: #00bfe7;
   }
 
   .slicknav_nav a:hover {
     border-radius: 0;
     background: transparent;
-    color: #111111;
+    color: #00bfe7;
   }
 
   .slicknav_nav {
-    background: #222222;
+/*    background: #222222;*/
   }
 
   .slicknav_btn {

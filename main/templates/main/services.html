@@ -8,9 +8,9 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <div class="breadcrumb__text">
-                    <h2>Our Sevices</h2>
+                    <h2>My Services</h2>
                     <div class="breadcrumb__links">
-                        <a href="#">Home</a>
+                        <a href="{% url 'home' %}">Home</a>
                         <span>Services</span>
                     </div>
                 </div>
@@ -29,9 +29,9 @@
                     <div class="services__item__icon">
                         <img src="{% static 'img/icons/si-2.png' %}" alt="">
                     </div>
-                    <h4>Scriptwriting and editing</h4>
-                    <p>Whether you’re halfway through the editing process, or you haven’t even started, our post
-                        production services can put the finishing touches.</p>
+                    <h4>Software Development</h4>
+                    <span>Code with a purpose</span>
+                    <p>Whether you're seeking to breathe life into a creative idea or seeking to enhance an existing software, I'm here to lend my expertise. With a passion for transforming concepts into functional code, I'm your partner in technological innovation.</p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
@@ -39,9 +39,9 @@
                     <div class="services__item__icon">
                         <img src="{% static 'img/icons/si-1.png' %}" alt="">
                     </div>
-                    <h4>Motion graphics</h4>
-                    <p>Whether you’re halfway through the editing process, or you haven’t even started, our post
-                        production services can put the finishing touches.</p>
+                    <h4>Scripting</h4>
+                    <span>Efficiency in Every Line</span>
+                    <p>From automating mundane tasks to optimizing complex processes, my scripting services are designed to elevate your efficiency. Let's harness the power of scripts to simplify your workflow and boost productivity.</p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
@@ -49,9 +49,9 @@
                     <div class="services__item__icon">
                         <img src="{% static 'img/icons/si-2.png' %}" alt="">
                     </div>
-                    <h4>Scriptwriting and editing</h4>
-                    <p>Whether you’re halfway through the editing process, or you haven’t even started, our post
-                        production services can put the finishing touches.</p>
+                    <h4>Web Development</h4>
+                    <span>Building Your Online Identity</span>
+                    <p>Your online presence is your digital identity. As a skilled developer, I'll transform your concepts into functional and user-friendly websites or web applications. While my focus lies in development, I also collaborate with talented designers to ensure your online presence is as captivating as your ideas. Let's build a seamless bridge between your imagination and the digital world.</p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
@@ -59,9 +59,9 @@
                     <div class="services__item__icon">
                         <img src="{% static 'img/icons/si-3.png' %}" alt="">
                     </div>
-                    <h4>Video distribution</h4>
-                    <p>Whether you’re halfway through the editing process, or you haven’t even started, our post
-                        production services can put the finishing touches.</p>
+                    <h4>Software Testing</h4>
+                        <span>Perfecting the Product</span>
+                        <p>Every piece of software deserves to be flawless. Through rigorous testing and meticulous attention to detail, I ensure that your software not only meets but exceeds expectations. Trust in my commitment to quality assurance.</p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
@@ -92,14 +92,14 @@
 <!-- Call To Action Section Begin -->
 <section class="callto sp__callto bg-gradient-animate">
     <div class="container">
-        <div class="callto__services spad set-bg" data-setbg="{% static 'img/calltos-bg.jpg' %}">
+        <div class="callto__services spad set-bg" data-setbg="{% static 'img/images/person-with-futuristic-metaverse-avatar-mask.jpg' %}">
+            <div class="overlay"></div>
             <div class="row d-flex justify-content-center">
                 <div class="col-lg-10 text-center">
                     <div class="callto__text">
-                        <h2>CREATE AWESOME VIDEOS WITH WIDEO’S POWERFUL FEATURES</h2>
-                        <p>Wideo combines all the features you need to easily create professional videos and
-                            presentations</p>
-                        <a href="#">Start your stories</a>
+                        <h2>Get in Touch</h2>
+                        <p>Ready to take the next step? Whether you have questions about my services, want to discuss a project, or simply want to say hello, I'd love to hear from you. Feel free to reach out, and let's start a conversation.</p>
+                        <a href="{% url 'contact' %}">Contact Me</a>
                     </div>
                 </div>
             </div>
