@@ -47,8 +47,8 @@
                                 <div class="services__item__icon">
                                     <img src="{% static 'img/icons/si-3.png' %}" alt="">
                                 </div>
-                                <h4>Download Resume</h4>
-                                <p>Whether you’re halfway through the editing process, or you.</p>
+                                <a class="btn-primary">Download Resume</a>
+                                <!-- <p>Whether you’re halfway through the editing process, or you.</p> -->
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6">
@@ -56,8 +56,8 @@
                                 <div class="services__item__icon">
                                     <img src="{% static 'img/icons/si-4.png' %}" alt="">
                                 </div>
-                                <h4>Contact</h4>
-                                <p>Whether you’re halfway through the editing process, or you.</p>
+                                <a class="btn-primary">Contact</a>
+                                <!-- <p>Whether you’re halfway through the editing process, or you.</p> -->
                             </div>
                         </div>
                     </div>
@@ -259,8 +259,64 @@
         </div>
 </section>
 <!-- Skills Section End -->
+
+<!-- Experience Timeline Section -->
+<section id="about__experience" class="experience spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="timeline__title">
+                    <div class="section-title">
+                        <div class="section-title center-title">
+                            <span></span>
+                            <h2>My Experience</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+        <div class="timeline">
+            <div class="timeline__job timeline__job--left">
+                <div class="timeline__job__marker"></div>
+                <div class="timeline__job__content">
+                    <h4 class="timeline__job__content__title">Freelancer</h4>
+                    <span class="timeline__job__content__date">2021 - Current</span>
+                    <p class="timeline__job__content__description">I was tasked to work on some Data Entry to get started, I sped that up with a simple, custom excel extraction script in Python. I am currently building an Online Health Course Chatbot with a platform called Creator UI.</p>               </div>
+            </div>
+            <div class="timeline__job timeline__job--right">
+                <div class="timeline__job__marker"></div>
+                <div class="timeline__job__content">
+                    <h4 class="timeline__job__content__title">Adobe InDesign Editor</h4>
+                    <span class="timeline__job__content__date">June 2020 - September 2020</span>
+
+                    <p class="timeline__job__content__description">I was responsible for the careful following and implementation of layout designs in Adobe InDesign. Worked with Farsee, Arabic, Turkish, and English study guides, coloring books, bible lessons, etc.</p>
+                </div>
+            </div>
+            <div class="timeline__job timeline__job--left">
+                <div class="timeline__job__marker"></div>
+                <div class="timeline__job__content">
+                    <h4 class="timeline__job__content__title">Computer Science Student</h4>
+                    <span class="timeline__job__content__date">August 2019 - November 2020</span>
+
+                    <p class="timeline__job__content__description">I studied computer science and had my passion for coding and learning all about computers reignited as I went to university to grow my romantic relationship and get engaged and then married.</p>
+                </div>
+            </div>
+            <div class="timeline__job timeline__job--right">
+                <div class="timeline__job__marker"></div>
+                <div class="timeline__job__content">
+                    <h4 class="timeline__job__content__title">Kitchen Manager</h4>
+                    <span class="timeline__job__content__date">June 2017 - August 2019</span>
+
+                    <p class="timeline__job__content__description">I was responsible for ordering supplies, food, and ingredients. Preparation of food, supervising/training new staff in specific stations, and cross-training if necessary, maintaining inventory levels and conducting full weekly inventory assessments, Assisting with menu changes and adjustments, scheduling, and responding personally to guest questions and complaints.</p>
+                </div>
+            </div>
+        </div>  
+    </div>
+</section>
+<!-- End of Experience Timeline Section -->
+
 <!-- Testimonial Section Begin -->
-<section class="testimonial spad set-bg" data-setbg="{% static 'img/testimonial-bg.jpg' %}">
+<!-- <section class="testimonial spad set-bg" data-setbg="{% static 'img/testimonial-bg.jpg' %}">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -360,7 +416,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- Testimonial Section End -->
 <!-- Counter Section Begin -->
 <section class="counter bg-gradient-animate">
@@ -371,8 +427,8 @@
                     <div class="counter__item">
                         <div class="counter__item__text">
                             <img src="{% static 'img/icons/ci-1.png' %}" alt="">
-                            <h2 class="counter_num">230</h2>
-                            <p>Compled Projects</p>
+                            <h2 class="counter_num">5</h2>
+                            <p>Completed Projects</p>
                         </div>
                     </div>
                 </div>
@@ -380,7 +436,7 @@
                     <div class="counter__item second__item">
                         <div class="counter__item__text">
                             <img src="{% static 'img/icons/ci-2.png' %}" alt="">
-                            <h2 class="counter_num">1068</h2>
+                            <h2 class="counter_num">4</h2>
                             <p>Happy clients</p>
                         </div>
                     </div>
@@ -389,8 +445,8 @@
                     <div class="counter__item third__item">
                         <div class="counter__item__text">
                             <img src="{% static 'img/icons/ci-3.png' %}" alt="">
-                            <h2 class="counter_num">230</h2>
-                            <p>Perspective clients</p>
+                            <h2 class="counter_num">5</h2>
+                            <p>Prospective clients</p>
                         </div>
                     </div>
                 </div>
@@ -398,8 +454,8 @@
                     <div class="counter__item four__item">
                         <div class="counter__item__text">
                             <img src="{% static 'img/icons/ci-4.png' %}" alt="">
-                            <h2 class="counter_num">230</h2>
-                            <p>Compled Projects</p>
+                            <h2 class="counter_num">6</h2>
+                            <p>Blog Posts</p>
                         </div>
                     </div>
                 </div>
@@ -408,8 +464,8 @@
     </div>
 </section>
 <!-- Counter Section End -->
-<!-- Team Section Begin -->
-<section class="team spad set-bg" data-setbg="{% static 'img/team-bg.jpg' %}">
+<!-- Hobbies & Interests Section Begin -->
+<section class="hobby spad set-bg">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -420,7 +476,95 @@
             </div>
         </div>
         <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6 p-0">
+                <div class="hobby__item">
+                    <div class="hobby__item__icon">
+                        <img src="/static/img/icons/si-4.png" alt="">
+                    </div>
+                    <h4>Programming</h4>
+                </div>
+            </div>
             <div class="col-lg-3 col-md-6 col-sm-6 p-0">
+                <div class="hobby__item">
+                    <div class="hobby__item__icon">
+                        <img src="/static/img/icons/si-4.png" alt="">
+                    </div>
+                    <h4>Linux</h4>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 p-0">
+                <div class="hobby__item">
+                    <div class="hobby__item__icon">
+                        <img src="/static/img/icons/si-4.png" alt="">
+                    </div>
+                    <h4>Movies</h4>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 p-0">
+                <div class="hobby__item">
+                    <div class="hobby__item__icon">
+                        <img src="/static/img/icons/si-4.png" alt="">
+                    </div>
+                    <h4>Tea & Coffee</h4>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 p-0">
+                <div class="hobby__item">
+                    <div class="hobby__item__icon">
+                        <img src="/static/img/icons/si-4.png" alt="">
+                    </div>
+                    <h4>Music</h4>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 p-0">
+                <div class="hobby__item">
+                    <div class="hobby__item__icon">
+                        <img src="/static/img/icons/si-4.png" alt="">
+                    </div>
+                    <h4>Gaming</h4>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 p-0">
+                <div class="hobby__item">
+                    <div class="hobby__item__icon">
+                        <img src="/static/img/icons/si-4.png" alt="">
+                    </div>
+                    <h4>Puzzles</h4>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 p-0">
+                <div class="hobby__item">
+                    <div class="hobby__item__icon">
+                        <img src="/static/img/icons/si-4.png" alt="">
+                    </div>
+                    <h4>Android</h4>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 p-0">
+            <div class="hobby__item">
+                    <div class="hobby__item__icon">
+                        <img src="/static/img/icons/si-4.png" alt="">
+                    </div>
+                    <h4>Drones</h4>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 p-0">
+                <div class="hobby__item">
+                    <div class="hobby__item__icon">
+                        <img src="/static/img/icons/si-4.png" alt="">
+                    </div>
+                    <h4>Animals</h4>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 p-0">
+                <div class="hobby__item">
+                    <div class="hobby__item__icon">
+                        <img src="/static/img/icons/si-4.png" alt="">
+                    </div>
+                    <h4>Philosophy</h4>
+                </div>
+            </div>
+            <!-- <div class="col-lg-3 col-md-6 col-sm-6 p-0">
                 <div class="team__item set-bg" data-setbg="{% static 'img/team/team-1.jpg' %}">
                     <div class="team__item__text">
                         <h4>Programming</h4>
@@ -461,66 +605,10 @@
                         <h4>Gaming</h4>
                     </div>
                 </div>
-            </div>
-            <!--             <div class="col-lg-3 col-md-6 col-sm-6 p-0">
-                <div class="team__item set-bg" data-setbg="{% static 'img/team/team-1.jpg' %}">
-                    <div class="team__item__text">
-                        <h4>AMANDA STONE</h4>
-                        <p>Videographer</p>
-                        <div class="team__item__social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 p-0">
-                <div class="team__item team__item--second set-bg" data-setbg="{% static 'img/team/team-2.jpg' %}">
-                    <div class="team__item__text">
-                        <h4>AMANDA STONE</h4>
-                        <p>Videographer</p>
-                        <div class="team__item__social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 p-0">
-                <div class="team__item team__item--third set-bg" data-setbg="{% static 'img/team/team-3.jpg' %}">
-                    <div class="team__item__text">
-                        <h4>AMANDA STONE</h4>
-                        <p>Videographer</p>
-                        <div class="team__item__social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 p-0">
-                <div class="team__item team__item--four set-bg" data-setbg="{% static 'img/team/team-4.jpg' %}">
-                    <div class="team__item__text">
-                        <h4>AMANDA STONE</h4>
-                        <p>Videographer</p>
-                        <div class="team__item__social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
             </div> -->
             <div class="col-lg-12 p-0">
                 <div class="team__btn">
-                    <a href="#" class="primary-btn">Meet Our Team</a>
+                    <a href="#" class="primary-btn">Contact Me</a>
                 </div>
             </div>
         </div>

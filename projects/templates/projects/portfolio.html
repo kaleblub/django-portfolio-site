@@ -51,10 +51,12 @@
                     <div class="portfolio__item__text">
                         <h4>{{ project.name }}</h4>
                         <p>{{ project.short_summary }}</p>
-                        <span>Languages Used: {{ project.languages_used.all|join:', ' }}</span>
-                        <a href="{{ project.repository_link }}">View</a>
-                        <a href="{{ project.live_demo_link }}">Demo</a>
-                        <a href="#">Download</a>
+                        <span><em>Languages Used: {{ project.languages_used.all|join:', ' }}</em></span>
+                        <div class="btn-group">
+                            <a type="button" class="btn btn-sm btn-outline-secondary" title="Github" href="{{ project.repository_link }}">View</a>
+                            <a type="button" class="btn btn-sm btn-outline-secondary" title="View Demo" href="{{ project.live_demo_link }}">Demo</a>
+                            <a type="button" class="btn btn-sm btn-outline-secondary" title="Download" href="#">Download</a>
+                        </div>
                     </div>
                 </div>
             </div>

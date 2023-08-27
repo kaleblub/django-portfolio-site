@@ -23,25 +23,6 @@
 <!-- Blog Section Begin -->
 <section class="blog spad bg-gradient-animate">
     <div class="container">
-        <!-- <div class="row">
-
-            {% for post in posts %}
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="blog__item">
-                        <h4>{{ post.title }}</h4>
-                        <ul>
-                            <li>{{post.date_posted|date:"F d, Y"}}</li>
-                            <li>{{post.author}}</li>
-                        </ul>
-                        <p>{{ post.summary }}</p>
-                        <a href="{% url 'post-detail' post.id %}">Read more <span class="arrow_right"></span></a>
-                    </div>
-                </div>
- -->
-
-
-            {% endfor %}
-        </div>
         <div class="row">
         {% for year, posts in grouped_posts.items %}
         <div class="posts-group">
@@ -49,7 +30,7 @@
             <ul class="posts-list">
                 {% for post in posts %}
                     <li class="post-item">
-                        <a href="#" class="hvr-grow">
+                        <a href="{% url 'post-detail' " class="hvr-grow">
                             <span class="post-title">{{ post.title }}</span>
                             <span class="post-day">{{ post.date_posted }}
                         </a>

@@ -80,6 +80,32 @@
         }
     });
 
+
+    /*------------------
+        Project Slider
+    --------------------*/
+    $(".work__slider").owlCarousel({
+        loop: true,
+        margin: 0,
+        items: 1,
+        dots: true,
+        dotsEach: 1,
+        smartSpeed: 1500,
+        autoHeight: true,
+        autoplay: true,
+        responsive: {
+            992: {
+                items: 1
+            },
+            768: {
+                items: 1
+            },
+            320: {
+                items: 1
+            }
+        }
+    });
+
     /*------------------
         Testimonial Slider
     --------------------*/

@@ -88,29 +88,30 @@
             <div class="col-lg-4">
                 <div class="services__title">
                     <div class="section-title">
-                        <span>Feature Projects</span>
-                        <h2>What I do?</h2>
+                        <span>Featured Projects</span>
+                        <h2>Discover My Work</h2>
                     </div>
-                    <p>If you hire a videographer of our team you will get a video professional to make a custom
-                        video for your business and, once the project is over.</p>
+                    <p>Explore a selection of my featured coding projects that highlight my skills and passion for software development. From web applications to innovative scripts, these projects showcase my dedication to turning ideas into functional and user-friendly solutions. Click on each project to learn more about its features and capabilities.</p>
                     <a href="{% url 'portfolio' %}" class="primary-btn">See All of Kaleb's Past Works</a>
                 </div>
             </div>
             <div class="col-lg-8">
+                <div class="work__slider owl-carousel">
                     {% for project in featured_projects %}
-                                <h3>{{ project.name }}</h3>
-                                <p>{{ project.short_summary }}</p>
-                                <a href="{{ project.repository_link }}">View</a>
-                                <a href="{{ project.live_demo_link }}">Demo</a>
-                                <a href="#">Download</a>
-                {% endfor %}
-                <!-- <div class="blog__image">
-                        <img src="" alt="Blog hover image">
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="blog__item__content">
+                    <div class="work__item">
+                        <div class="project-image">
+                            <img src="{{ project.cover_image.url }}" alt="{{ project.name }} Cover Image">
+                        </div>
                         <h4>{{ project.name }}</h4>
-                    </div> -->
+                        <p>{{ project.short_summary }}</p>
+                        <div class="btn-group">
+                        <a type="button" class="btn btn-sm btn-outline-secondary" title="Github" href="{{ project.repository_link }}">View</a>
+                        <a type="button" class="btn btn-sm btn-outline-secondary" title="View Demo" href="{{ project.live_demo_link }}">Demo</a>
+                        <a type="button" class="btn btn-sm btn-outline-secondary" title="Download" href="#">Download</a>
+                    </div>
+                    </div>
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>
@@ -178,11 +179,6 @@
                 {% for post in recent_posts %}
                 <div class="col-lg-4">
                     <div class="blog__item latest__item">
-                        <!--  <div class="blog__image">
-                            <img src="{% static '/img/images/html-css-collage-concept.jpg' %}" alt="Blog hover image">
-                            <div class="image-overlay"></div>
-                        </div>
-                        <div class="blog__item__content"> -->
                         <h4>{{ post.title }}</h4>
                         <ul>
                             <li>{{ post.date_posted }}</li>
