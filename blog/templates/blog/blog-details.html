@@ -1,5 +1,6 @@
 {% extends "main/base.html" %}
 {% load static %}
+{% load markdown_processing %}
 {% block content %}
 
     <!-- Blog Details Hero Begin -->
@@ -28,7 +29,7 @@
                 <div class="col-lg-8">
                     <div class="blog__details__content">
                         <div class="blog__details__text">
-                            {{ post.content }}
+                            {{ post.content | markdown_to_html | safe }}
                         </div>
                         <div class="blog__details__quote">
                             <p>Create horizontal, square and vertical videos that are ready to be exported to your
