@@ -693,6 +693,17 @@ section:nth-child(even) {
   vertical-align: middle;
 }
 
+.btn-outline-secondary {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.btn-outline-secondary:hover {
+  color: #fff;
+  background-color: #21c2e3;
+  border-color: #21c2e3;
+}
+
 /*---------------------
   Counter
 -----------------------*/
@@ -1799,6 +1810,10 @@ section:nth-child(even) {
     opacity: 1;
 }
 
+.portfolio__item:hover > .portfolio__item__text {
+  color: #ffffff !important;
+}
+
 svg {
     color: var(--card-hover-icon-color);
 }
@@ -1943,7 +1958,7 @@ svg {
 /*---------------------
     Blog
 -----------------------*/
-.blog {}
+/*.blog {}*/
 
 .posts {
     margin: 20px auto;
@@ -1953,44 +1968,38 @@ svg {
     width: 100%;
 }
 
-.posts .posts-group {
+.posts-group {
     display: flex;
     line-height: normal;
-    margin-bottom: 1.9em;
+    margin-bottom: 1.9rem;
+    width: 100%;
 }
 
-.posts .post-year {
-    font-size: 2em;
-    margin-right: 1.8em;
-    opacity: 0.6;
+.post-year {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-right: 3.8rem;
     padding-top: 6px;
 }
 
-.posts .posts-list {
+.posts-list {
     flex-grow: 1;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.posts .post-item {
+.post-item {
     border-bottom: 1px dashed grey;
 }
 
-.posts a {
+.hvr-grow {
+    color: #A1A1AA;
     align-items: baseline;
     display: flex;
     justify-content: space-between;
     padding: 12px 0;
     text-decoration: none;
-}
-
-.posts a:hover {
-    color: #d01d57;
-    text-shadow: 0 0 1rem #237A57;
-}
-
-.posts .hvr-grow {
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
@@ -2000,19 +2009,22 @@ svg {
     transition-property: transform;
 }
 
-.posts .hvr-grow:hover,
-.posts .hvr-grow:focus,
-.posts .hvr-grow:active {
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
+    color: #00bfe7 !important;
+    text-shadow: 0 0 0.5rem #00bfe7;
 }
 
-.posts .post-title {
+.post-title {
     font-size: 1rem;
     margin: 5px 0;
 }
 
-.posts .post-day {
+.post-day {
     flex-shrink: 0;
     margin-left: 1em;
 }

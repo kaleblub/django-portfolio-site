@@ -13,7 +13,7 @@ class BlogHome(ListView):
 	template_name = 'blog/blog.html'
 	context_object_name = 'posts'
 	ordering = ['-date_posted']
-	paginate_by = 10
+	paginate_by = 1
 
 	def get_posts_by_year(self):
 		posts = self.get_queryset()
