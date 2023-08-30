@@ -105,8 +105,8 @@
                         <h4>{{ project.name }}</h4>
                         <p>{{ project.short_summary }}</p>
                         <div class="btn-group">
-                        <a type="button" class="btn btn-sm btn-outline-secondary" title="Github" href="{{ project.repository_link }}">View</a>
-                        <a type="button" class="btn btn-sm btn-outline-secondary" title="View Demo" href="{{ project.live_demo_link }}">Demo</a>
+                        <a type="button" class="btn btn-sm btn-outline-secondary" title="Github" href="{{ project.repository_link }}" target="_blank">View</a>
+                        <a type="button" class="btn btn-sm btn-outline-secondary" title="View Demo" href="{{ project.live_demo_link }}" target="_blank">Demo</a>
                         <a type="button" class="btn btn-sm btn-outline-secondary" title="Download" href="#">Download</a>
                     </div>
                     </div>
@@ -203,7 +203,7 @@
                 <div class="callto__text">
                     <h2>Ready to Transform Your Online Presence? Contact Me Now!</h2>
                     <p>INC5000, Best places to work 2019</p>
-                    <a href="#">Start your stories</a>
+                    <a href="{% url 'contact' %}">Contact Me!</a>
                 </div>
             </div>
         </div>
