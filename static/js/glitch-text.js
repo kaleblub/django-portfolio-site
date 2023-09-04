@@ -18,7 +18,7 @@ document.querySelectorAll(".glitch-text").forEach(button => {
                 .split("")
                 .map((letter, index) => {
                     if (index < iterations) {
-                        return randomizedText[index];
+                        return originalText[index];
                     }
 
                     return letters[Math.floor(Math.random() * 26)];
@@ -33,7 +33,7 @@ document.querySelectorAll(".glitch-text").forEach(button => {
             }
 
             iterations += 1 / 3;
-        }, 20);
+        }, 30);
     });
 
     button.addEventListener("mouseout", event => {

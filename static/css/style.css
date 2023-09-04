@@ -2016,7 +2016,7 @@ svg {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
     color: #00bfe7 !important;
-    text-shadow: 0 0 0.5rem #00bfe7;
+/*    text-shadow: 0 0 0.5rem #00bfe7;*/
 }
 
 .post-title {
