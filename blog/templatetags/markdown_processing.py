@@ -2,6 +2,7 @@ from django import template
 from django.template.defaultfilters import stringfilter
 
 import markdown
+from markdown.extensions.codehilite import CodeHiliteExtension
 
 register = template.Library()
 
@@ -11,7 +12,7 @@ def markdown_to_html(value):
 	md = markdown.Markdown(
 		extensions=[
 			'markdown.extensions.fenced_code',
-			codehilite.CodeHiliteExtension(css_class='highlight', linenums=True),
+			CodeHiliteExtension(css_class='highlight', linenums=True),
 		]
 	)
 	return md.convert(value)
