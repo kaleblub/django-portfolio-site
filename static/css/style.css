@@ -524,7 +524,7 @@ section:nth-child(even) {
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 18px;
-    position: relative;
+/*    position: relative;*/
     top: 100px;
     -webkit-transition: all, 0.3s;
     -o-transition: all, 0.3s;
@@ -538,7 +538,7 @@ section:nth-child(even) {
     line-height: 70px;
     text-transform: uppercase;
     margin-bottom: 38px;
-    position: relative;
+/*    position: relative;*/
     top: 100px;
     -webkit-transition: all, 0.5s;
     -o-transition: all, 0.5s;
@@ -1462,11 +1462,11 @@ section:nth-child(even) {
 .timeline__job:hover .timeline__job__marker {
     background: #00bfe7;
     border: 5px solid #000;
-    box-shadow: 0 0 1rem #00bfe7;
+/*    box-shadow: 0 0 1rem #00bfe7;*/
 }
 
 .timeline__job:hover .timeline__job__content {
-    box-shadow: 0 0 2rem #00bfe7;
+/*    box-shadow: 0 0 2rem #00bfe7;*/
     border: solid 1px #00bfe7;
 }
 

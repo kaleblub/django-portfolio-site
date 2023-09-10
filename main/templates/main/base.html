@@ -57,14 +57,16 @@
                 <div class="col-lg-10">
                     <div class="header__nav__option">
                         <nav class="header__nav__menu mobile-menu">
+                            {% with request.resolver_match.url_name as url_name %}
                             <ul>
-                                <li class="active glitch-text"><a href="{% url 'home' %}" data-value="Home">Home</a></li>
-                                <li class="glitch-text"><a href="{% url 'about' %}" data-value="About">About</a></li>
-                                <li class="glitch-text"><a href="{% url 'portfolio' %}" data-value="Portfolio">Portfolio</a></li>
-                                <li class="glitch-text"><a href="{% url 'blog' %}" data-value="Blog">Blog</a></li>
-                                <li class="glitch-text"><a href="{% url 'services' %}" data-value="Services">Services</a></li>
-                                <li class="glitch-text"><a href="{% url 'contact' %}" data-value="Contact">Contact</a></li>
+                                <li class="glitch-text {% if url_name == 'home' %}active{% endif %}"><a href="{% url 'home' %}" data-value="Home">Home</a></li>
+                                <li class="glitch-text  {% if url_name == 'about' %}active{% endif %}"><a href="{% url 'about' %}" data-value="About">About</a></li>
+                                <li class="glitch-text  {% if url_name == 'portfolio' %}active{% endif %}"><a href="{% url 'portfolio' %}" data-value="Portfolio">Portfolio</a></li>
+                                <li class="glitch-text {% if url_name == 'blog' %}active{% endif %}"><a href="{% url 'blog' %}" data-value="Blog">Blog</a></li>
+                                <li class="glitch-text {% if url_name == 'services' %}active{% endif %}"><a href="{% url 'services' %}" data-value="Services">Services</a></li>
+                                <li class="glitch-text {% if url_name == 'contact' %}active{% endif %}"><a href="{% url 'contact' %}" data-value="Contact">Contact</a></li>
                             </ul>
+                            {% endwith %}
                         </nav>
                         <div class="header__nav__social">
                             <a href="https://github.com/kaleblub"><i class="fa fa-github"></i></a>
