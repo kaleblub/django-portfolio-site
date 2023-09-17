@@ -136,7 +136,8 @@ section:nth-child(even) {
     margin-bottom: 6px;
 }
 
-.section-title h2 {
+.section-title h2,
+.blog__details__text h2 {
     color: #ffffff;
     font-weight: 700;
     text-transform: uppercase;
@@ -144,7 +145,8 @@ section:nth-child(even) {
     padding-bottom: 25px;
 }
 
-.section-title h2:after {
+.section-title h2:after,
+.blog__details__text h2:after {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -271,6 +273,9 @@ section:nth-child(even) {
 
 /* Preloader */
 #preloader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     width: 100%;
     height: 100%;
@@ -281,61 +286,49 @@ section:nth-child(even) {
 }
 
 .loader {
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -13px;
-    margin-left: -13px;
-    border-radius: 60px;
-    animation: loader 0.8s linear infinite;
-    -webkit-animation: loader 0.8s linear infinite;
+    position: relative;
+    margin: 75px auto;
+    width: 150px;
+    height: 150px;
+    display: block;
+    overflow: hidden;
 }
 
-@keyframes loader {
+.loader div {
+    height: 100%;
+}
+
+.loader div:hover {
+    animation-play-state: paused;
+}
+
+.loader, .loader div {
+    border-radius: 50%;
+    padding: 8px;
+    border: 2px solid transparent;
+    animation: rotate linear 3.5s infinite;
+
+    border-top-color: #ffffff;
+    border-left-color: #00bfe7;
+    animation-timing-function: cubic-bezier(.55, .38, .21, .88);
+    animation-duration: 3s;
+}
+
+.loader, .loader * {
+    will-change: transform;
+}
+
+@keyframes rotate {
     0% {
-        -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
-        border: 4px solid #f44336;
-        border-left-color: transparent;
     }
-
     50% {
-        -webkit-transform: rotate(180deg);
         transform: rotate(180deg);
-        border: 4px solid #673ab7;
-        border-left-color: transparent;
     }
-
     100% {
-        -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
-        border: 4px solid #f44336;
-        border-left-color: transparent;
     }
 }
-
-@-webkit-keyframes loader {
-    0% {
-        -webkit-transform: rotate(0deg);
-        border: 4px solid #f44336;
-        border-left-color: transparent;
-    }
-
-    50% {
-        -webkit-transform: rotate(180deg);
-        border: 4px solid #673ab7;
-        border-left-color: transparent;
-    }
-
-    100% {
-        -webkit-transform: rotate(360deg);
-        border: 4px solid #f44336;
-        border-left-color: transparent;
-    }
-}
-
 /*---------------------
   Header
 -----------------------*/
@@ -527,7 +520,7 @@ section:nth-child(even) {
 
 .hero__text .primary-btn {
     position: relative;
-    top: 100px;
+/*    top: 100px;*/
     -webkit-transition: all, 0.7s;
     -o-transition: all, 0.7s;
     transition: all, 0.7s;
@@ -797,6 +790,14 @@ section:nth-child(even) {
     border: 1px solid #222222 !important;
     background: url(../img/blog/blog-1.jpg);
     background-size: cover;
+}
+
+.blog__item.latest__item a:hover {
+
+}
+
+.blog__item.latest__item a:hover .arrow_right{
+    transform: translateX(50%);
 }
 
 .latest__slider.owl-carousel .owl-item .col-lg-4 {
@@ -2112,6 +2113,7 @@ svg {
 
 .blog__hero__text h2 {
     color: #ffffff;
+    font-size: 50px;
     font-weight: 700;
     line-height: 47px;
     text-transform: uppercase;
@@ -2156,7 +2158,13 @@ svg {
     margin-bottom: 30px;
 }
 
-.blog__details__text p {
+.blog__details__text h2 + * {
+    padding-top: 25px;
+}
+
+.blog__details__text p,
+.blog__details__text ol,
+.blog__details__text ul {
     font-size: 18px;
     line-height: 29px;
     font-weight: 300;
@@ -2165,6 +2173,11 @@ svg {
 
 .blog__details__text p:last-child {
     margin-bottom: 0;
+}
+
+.blog__details__text ol,
+.blog__details__text ul {
+    color: #adadad;
 }
 
 .blog__details__quote {
@@ -2391,7 +2404,6 @@ svg {
   Contact Widget
 -----------------------*/
 .contact-widget {
-
     padding-bottom: 70px;
 }
 
@@ -2459,9 +2471,9 @@ svg {
     height: 50px;
     width: 100%;
     border: 1px solid rgba(225, 225, 225, 0.5);
-    background: transparent;
-    font-size: 16px;
-    color: #adadad;
+    background: rgba(255, 255, 255, 0.07);
+    font-size: 1.1rem;
+    color: #ffffff;
     padding-left: 20px;
     font-weight: 300;
     margin-right: 20px;
@@ -2472,8 +2484,13 @@ svg {
 }
 
 .contact__form form input:placeholder {
-    color: #adadad;
+    color: #ffffff;
 }
+
+.contact__form form input:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
 
 .contact__form form input:focus {
     border-color: #00bfe7;
@@ -2483,9 +2500,9 @@ svg {
     height: 110px;
     width: 100%;
     border: 1px solid rgba(225, 225, 225, 0.5);
-    background: transparent;
-    font-size: 16px;
-    color: #adadad;
+    background: rgba(255, 255, 255, 0.07);
+    font-size: 1.1rem;
+    color: #ffffff;
     padding-top: 12px;
     padding-left: 20px;
     font-weight: 300;
@@ -2497,7 +2514,11 @@ svg {
 }
 
 .contact__form form textarea:placeholder {
-    color: #adadad;
+    color: #ffffff;
+}
+
+.contact__form form textarea:hover {
+    background: rgba(255, 255, 255, 0.2);
 }
 
 .contact__form form textarea:focus {
