@@ -336,33 +336,6 @@ section:nth-child(even) {
     }
 }
 
-/*------------------
-  Rotating Gradient Background Animation
----------------------*/
-
-.bg-gradient-animate {
-    background: #040f29;
-
-    /*background: linear-gradient(-45deg, #040c1c, #040d22, #051d4d, #051641);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
-  height: 100vh;*/
-}
-
-/*@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}*/
-
-
-
 /*---------------------
   Header
 -----------------------*/
@@ -1705,9 +1678,13 @@ section:nth-child(even) {
 }
 
 /*---------------------
-  Portfolio
+
 -----------------------*/
 .portfolio {}
+
+.portfolio__gallery {
+/*    display: table;*/
+}
 
 .portfolio__filter {
     text-align: center;
