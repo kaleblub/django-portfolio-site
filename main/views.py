@@ -14,3 +14,6 @@ def home(request):
 
 def services(request):
 	return render(request, 'main/services.html')
+
+def error_404_view(request, exception):
+	return render(request, 'main/404.html', status=404)

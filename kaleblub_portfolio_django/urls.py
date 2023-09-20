@@ -38,6 +38,8 @@ urlpatterns = [
     path('contact/', contact_views.contact, name='contact'),
 ]
 
+handler404 = 'main.views.error_404_view'
+
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
