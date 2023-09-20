@@ -40,11 +40,11 @@
     });
 
     //Masonary
-    $('.work__gallery').masonry({
-        itemSelector: '.work__item',
-        columnWidth: '.grid-sizer',
-        gutter: 10
-    });
+    // $('.work__gallery').masonry({
+    //     itemSelector: '.work__item',
+    //     columnWidth: '.grid-sizer',
+    //     gutter: 10
+    // });
 
     /*------------------
 		Navigation
@@ -53,33 +53,6 @@
         prependTo: '#mobile-menu-wrap',
         allowParentLinks: true
     });
-
-    /*------------------
-		Hero Slider
-	--------------------*/
-    $('.hero__slider').owlCarousel({
-        loop: true,
-        dots: true,
-        mouseDrag: false,
-        animateOut: 'fadeOut',
-        animateIn: 'fadeIn',
-        items: 1,
-        margin: 0,
-        smartSpeed: 1200,
-        autoHeight: false,
-        autoplay: true,
-    });
-
-    var dot = $('.hero__slider .owl-dot');
-    dot.each(function () {
-        var index = $(this).index() + 1;
-        if (index < 10) {
-            $(this).html('0').append(index);
-        } else {
-            $(this).html(index);
-        }
-    });
-
 
     /*------------------
         Project Slider
@@ -132,7 +105,7 @@
     });
 
     /*------------------
-        Latest Slider
+        Latest Blog Slider
     --------------------*/
     $(".latest__slider").owlCarousel({
         loop: true,
@@ -186,9 +159,9 @@
     /*------------------
         Video Popup
     --------------------*/
-    $('.video-popup').magnificPopup({
-        type: 'iframe'
-    });
+    // $('.video-popup').magnificPopup({
+    //     type: 'iframe'
+    // });
 
     /*------------------
         Counter
@@ -209,118 +182,7 @@
     /*---------------
     Animated Header & Background
     -----------------*/
-//     new FinisherHeader({
-//   "count": 4,
-//   "size": {
-//     "min": 1200,
-//     "max": 1500,
-//     "pulse": 0.1
-//   },
-//   "speed": {
-//     "x": {
-//       "min": 0,
-//       "max": 0.2
-//     },
-//     "y": {
-//       "min": 0,
-//       "max": 0.2
-//     }
-//   },
-//   "colors": {
-//     "background": "#040c1c",
-//     "particles": [
-//       "#d1002c",
-//       "#04102c",
-//       "#00bfe7",
-//       "#d1002c",
-//       "#00bfe7"
-//     ]
-//   },
-//   "blending": "overlay",
-//   "opacity": {
-//     "center": 0.8,
-//     "edge": 0.2
-//   },
-//   "skew": 0,
-//   "shapes": [
-//     "c",
-//     "t"
-//   ]
-// });
-// new FinisherHeader2({
-//   "count": 12,
-//   "size": {
-//     "min": 1300,
-//     "max": 1500,
-//     "pulse": 0
-//   },
-//   "speed": {
-//     "x": {
-//       "min": 0.6,
-//       "max": 3
-//     },
-//     "y": {
-//       "min": 0.6,
-//       "max": 3
-//     }
-//   },
-//   "colors": {
-//     "background": "#060607",
-//     "particles": [
-//       "#040c1c",
-//       "#040d22",
-//       "#051d4d",
-//       "#051641"
-//     ]
-//   },
-//   "blending": "none",
-//   "opacity": {
-//     "center": 0.6,
-//     "edge": 0
-//   },
-//   "skew": 0,
-//   "shapes": [
-//     "c"
-//   ]
-// });
 
-// new FinisherHeader({
-//   "count": 10,
-//   "size": {
-//     "min": 1300,
-//     "max": 1500,
-//     "pulse": 0.3
-//   },
-//   "speed": {
-//     "x": {
-//       "min": 0.1,
-//       "max": 0.6
-//     },
-//     "y": {
-//       "min": 0.1,
-//       "max": 0.6
-//     }
-//   },
-//   "colors": {
-//     "background": "#040c1c",
-//     "particles": [
-//       "#d1002c",
-//       "#04102c",
-//       "#00bfe7",
-//       "#d1002c",
-//       "#00bfe7"
-//     ]
-//   },
-//   "blending": "overlay",
-//   "opacity": {
-//     "center": 0.5,
-//     "edge": 0.05
-//   },
-//   "skew": 0,
-//   "shapes": [
-//     "c"
-//   ]
-// });
 
 
 })(jQuery);
