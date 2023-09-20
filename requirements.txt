@@ -1,2 +1,5 @@
 django
 whitenoise
+django-markdownify
+django-crispy-forms
+crispy-bootstrap5
