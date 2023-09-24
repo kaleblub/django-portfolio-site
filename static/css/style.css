@@ -265,6 +265,7 @@ section:nth-child(even) {
   padding: 10px 30px;
   display: inline-block;
   color: #fff;
+  background-color: transparent;
   font-weight: 400;
   text-transform: uppercase;
   -webkit-box-shadow: 0px 0px 0px 2px #fff, 2px 2px 0px 2px #00bfe7;
@@ -487,6 +488,10 @@ section:nth-child(even) {
     color: #ffffff;
     font-size: 15px;
     margin-right: 18px;
+}
+
+.header__nav__social a:hover {
+    color: #00bfe7;
 }
 
 .header__nav__social a:last-child {
@@ -806,16 +811,25 @@ section:nth-child(even) {
 
 .blog__item.latest__item {
     margin-bottom: 0;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+    -ms-transition: all 0.35s ease-in-out;
 }
 
 .blog__item.latest__item:hover {
-    border: 1px solid #222222 !important;
-    background: url(../img/blog/blog-1.jpg);
-    background-size: cover;
+    border: 1px solid #00bfe7 !important;
+    /*background: url(../img/blog/blog-1.jpg);
+    background-size: cover;*/
+}
+
+.blog__item.latest__item a {
+    transition: all 0.5s ease-in-out;
 }
 
 .blog__item.latest__item a:hover {
-
+    color: #00bfe7;
 }
 
 .blog__item.latest__item a:hover .arrow_right{
@@ -913,6 +927,13 @@ section:nth-child(even) {
     display: inline-block;
 }
 
+.footer__top__nav {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-direction: row;
+}
+
 .footer__top__social {
     text-align: right;
 }
@@ -928,6 +949,11 @@ section:nth-child(even) {
     line-height: 44px;
     text-align: center;
     margin-right: 6px;
+    transition: color 0.5s ease-in-out;
+}
+
+.footer__top__social a:hover {
+    color: #00bfe7;
 }
 
 .footer__top__social a:last-child {
@@ -1690,9 +1716,8 @@ section:nth-child(even) {
     position: absolute;
 }
 
-.logo {
-
-    padding: 100px 20px;
+.about__logo__carousel {
+    padding: 40px 20px;
 }
 
 .logo__carousel.owl-carousel .owl-item img {
@@ -2489,6 +2514,10 @@ svg {
     margin-bottom: 35px;
 }
 
+.contact__form span {
+    color: #fff;
+}
+
 .contact__form form input {
     height: 50px;
     width: 100%;
@@ -2895,6 +2924,11 @@ svg {
     .header__nav__option {
         display: none;
     }
+
+    .footer__top__nav {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 }
 
 /* Wide Mobile = 480px */
@@ -3032,6 +3066,11 @@ svg {
 
     .work__item.large__item {
         width: calc(50% - 10px);
+    }
+
+    .footer__top__nav {
+        flex-direction: column;
+        padding-top: 1rem;
     }
 
     .footer__top__social {
