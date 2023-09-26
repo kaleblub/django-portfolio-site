@@ -183,7 +183,7 @@
                     <div class="blog__item latest__item">
                         <h4>{{ post.title }}</h4>
                         <ul>
-                            <li>{{ post.date_posted }}</li>
+                            <li>{{ post.date_posted|date:"M d, Y" }}</li>
                             <!-- <li>MAYBE LIKES HERE?</li> -->
                         </ul>
                         <p>{{ post.summary }}</p>

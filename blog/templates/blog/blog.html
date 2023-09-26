@@ -31,7 +31,7 @@
                     <li class="post-item">
                         <a href="{% url 'post-detail' post.id %}" class="hvr-grow">
                             <span class="post-title">{{ post.title }}</span>
-                            <span class="post-day">{{ post.date_posted }}
+                            <span class="post-day">{{ post.date_posted|date:"M d, Y" }}
                         </a>
                     </li>
                     {% endfor %}
