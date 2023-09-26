@@ -40,7 +40,7 @@
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <div class="services__item">
                             <div class="services__item__icon">
-                                <img src="{% static 'img/icons/icomoon-white/code.svg' %}" alt="">
+                                <img src="{% static 'img/icons/icomoon-white/code.svg' %}" alt="" loading="lazy">
                             </div>
                             <h4>Software Development</h4>
                             <span>Code with a purpose</span>
@@ -50,7 +50,7 @@
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <div class="services__item">
                             <div class="services__item__icon">
-                                <img src="{% static 'img/icons/icomoon-white/terminal.svg' %}" alt="">
+                                <img src="{% static 'img/icons/icomoon-white/terminal.svg' %}" alt="" loading="lazy">
                             </div>
                             <h4>Scripting</h4>
                             <span>Efficiency in Every Line</span>
@@ -60,7 +60,7 @@
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <div class="services__item">
                             <div class="services__item__icon">
-                                <img src="{% static 'img/icons/icomoon-white/browser.svg' %}" alt="">
+                                <img src="{% static 'img/icons/icomoon-white/browser.svg' %}" alt="" loading="lazy">
                             </div>
                             <h4>Web Development</h4>
                             <span>Building Your Online Identity</span>
@@ -70,7 +70,7 @@
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <div class="services__item">
                             <div class="services__item__icon">
-                                <img src="{% static 'img/icons/icomoon-white/bug.svg' %}" alt="">
+                                <img src="{% static 'img/icons/icomoon-white/bug.svg' %}" alt="" loading="lazy">
                             </div>
                             <h4>Software Testing</h4>
                             <span>Perfecting the Product</span>
@@ -102,7 +102,7 @@
                     {% for project in featured_projects %}
                     <div class="work__item">
                         <div class="project-image">
-                            <img src="{{ project.cover_image.url }}" alt="{{ project.name }} Cover Image">
+                            <img src="{{ project.cover_image.url }}" alt="{{ project.name }} Cover Image" loading="lazy">
                         </div>
                         <h4>{{ project.name }}</h4>
                         <p>{{ project.short_summary }}</p>
@@ -127,7 +127,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="counter__item">
                         <div class="counter__item__text">
-                            <img src="{% static 'img/icons/ci-1.png' %}" alt="">
+                            <img src="{% static 'img/icons/ci-1.png' %}" alt="" loading="lazy">
                             <h2 class="counter_num">5</h2>
                             <p>Completed Projects</p>
                         </div>
@@ -136,7 +136,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="counter__item second__item">
                         <div class="counter__item__text">
-                            <img src="{% static 'img/icons/happyClient.png' %}" alt="" style="width: 65px">
+                            <img src="{% static 'img/icons/happyClient.png' %}" alt="" style="width: 65px" loading="lazy">
                             <h2 class="counter_num">4</h2>
                             <p>Happy clients</p>
                         </div>
@@ -145,7 +145,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="counter__item third__item">
                         <div class="counter__item__text">
-                            <img src="{% static 'img/icons/prospectiveClient.png' %}" alt="" style="width: 65px">
+                            <img src="{% static 'img/icons/prospectiveClient.png' %}" alt="" style="width: 65px" loading="lazy">
                             <h2 class="counter_num">5</h2>
                             <p>Prospective clients</p>
                         </div>
@@ -154,7 +154,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="counter__item four__item">
                         <div class="counter__item__text">
-                            <img src="{% static 'img/icons/blueBlogPost.png' %}" alt="" style="width: 65px">
+                            <img src="{% static 'img/icons/blueBlogPost.png' %}" alt="" style="width: 65px" loading="lazy">
                             <h2 class="counter_num">6</h2>
                             <p>Blog Posts</p>
                         </div>

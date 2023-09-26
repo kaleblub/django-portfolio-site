@@ -1,13 +1,5 @@
-/*  ---------------------------------------------------
-    Template Name: Dreams
-    Description: Dreams wedding template
-    Author: Colorib
-    Author URI: https://colorlib.com/
-    Version: 1.0
-    Created: Colorib
----------------------------------------------------------  */
-
 'use strict';
+console.log("Script Loaded");
 
 (function ($) {
 
@@ -17,18 +9,20 @@
     $(window).on('load', function () {
         $(".loader").fadeOut();
         $("#preloader").delay(200).fadeOut("slow");
+    });
 
-        /*------------------
-            Portfolio filter
-        --------------------*/
-        $('.portfolio__filter li').on('click', function () {
-            $('.portfolio__filter li').removeClass('active');
-            $(this).addClass('active');
-        });
-        if ($('.portfolio__gallery').length > 0) {
-            var containerEl = document.querySelector('.portfolio__gallery');
-            var mixer = mixitup(containerEl);
-        }
+    /*------------------
+        Portfolio filter
+    --------------------*/
+    $('.portfolio__filter li').on('click', function () {
+        console.log("Portfolio Filter Clicked");
+        $('.portfolio__filter li').removeClass('active');
+        $(this).addClass('active');
+    if ($('.portfolio__gallery').length > 0) {
+        var containerEl = document.querySelector('.portfolio__gallery');
+        console.log("Container Element:", containerEl);
+        var mixer = mixitup(containerEl);
+    }
     });
 
     /*------------------
@@ -36,6 +30,7 @@
     --------------------*/
     $('.set-bg').each(function () {
         var bg = $(this).data('setbg');
+        console.log("Background Set: ", bg);
         $(this).css('background-image', 'url(' + bg + ')');
     });
 
@@ -53,6 +48,54 @@
         prependTo: '#mobile-menu-wrap',
         allowParentLinks: true
     });
+
+    /*------------------
+        Finisher-Header
+    --------------------*/
+    document.addEventListener("DOMContentLoaded", function() {
+        const config1 = {
+            className: "finisher-header",
+            "count": 4,
+            "size": {
+                "min": 1200,
+                "max": 1500,
+                "pulse": 0.1
+            },
+            "speed": {
+                "x": {
+                    "min": 0,
+                    "max": 0.2
+                },
+                "y": {
+                    "min": 0,
+                    "max": 0.2
+                }
+            },
+            "colors": {
+                "background": "#040c1c",
+                "particles": [
+                    "#d1002c",
+                    "#04102c",
+                    "#00bfe7",
+                    "#d1002c",
+                    "#00bfe7"
+                ]
+            },
+            "blending": "overlay",
+            "opacity": {
+                "center": 0.8,
+                "edge": 0.2
+            },
+            "skew": 0,
+            "shapes": [
+                "c",
+                "t"
+            ]
+        };
+        
+        new FinisherHeader(config1);
+    });
+   
 
     /*------------------
         Project Slider
