@@ -1,10 +1,11 @@
 /******************************************************************
   Template Name: Dreams
-  Description: Dreams wedding template
+  Description: Dreams website template
   Author: Colorib
   Author URI: https://colorlib.com/
   Version: 1.0
   Created: Colorib
+  Used-by: Kaleb Humpal
 ******************************************************************/
 /*------------------------------------------------------------------
 [Table of contents]
@@ -2078,7 +2079,7 @@ svg {
 .blog__item:hover {
     border: 1px solid transparent !important;
     background-color: rgba(0, 0, 0, 0.8);
-    background: url(../img/images/html-css-collage-concept.jpg) no-repeat;
+/*    background: url(../img/images/html-css-collage-concept.jpg) no-repeat;*/
     background-size: cover;
 }
 
@@ -3093,6 +3094,10 @@ svg {
 
     .contact__map {
         margin-bottom: 40px;
+    }
+
+    .contact__map iframe {
+        height: inherit;
     }
 
     .about__pic__item {
