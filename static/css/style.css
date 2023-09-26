@@ -3104,6 +3104,20 @@ svg {
         margin-right: 0;
     }
 
+    .posts-group {
+        flex-direction: column;   
+    }
+
+    .post-year {
+        margin-right: 1.5rem;
+    }
+
+    .post-list {
+        margin-right: 2rem;
+        margin-left: 2rem;
+    }
+
+
     .blog__details__quote {
         padding: 30px 45px 35px 35px;
     }
