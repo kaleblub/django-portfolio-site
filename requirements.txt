@@ -3,3 +3,4 @@ whitenoise
 django-markdownify
 django-crispy-forms
 crispy-bootstrap5
+python-dotenv
