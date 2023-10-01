@@ -933,10 +933,12 @@ section:nth-child(even) {
     flex-wrap: nowrap;
     justify-content: center;
     flex-direction: row;
+    padding-top: 1.5rem;
 }
 
 .footer__top__social {
     text-align: right;
+    padding-top: 1.5rem;
 }
 
 .footer__top__social a {
