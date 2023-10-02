@@ -5,3 +5,4 @@ django-crispy-forms
 crispy-bootstrap5
 python-dotenv
 dj-database-url
+psycopg2-binary
