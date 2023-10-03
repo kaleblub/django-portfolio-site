@@ -15,13 +15,14 @@
     }
   ],
   "routes": [
+    { "handle": "filesystem" },
     {
       "src": "/static/(.*)",
-      "dest": "/serverless_static.py"
+      "dest": "/static///$1"
     },
     {
       "src": "/(.*)",
-      "dest": "kaleblub_portfolio_django/wsgi.py"
+      "dest": "kaleblub_portfolio_django"
     }
   ]
 }
