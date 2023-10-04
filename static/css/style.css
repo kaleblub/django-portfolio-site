@@ -821,8 +821,6 @@ section:nth-child(even) {
 
 .blog__item.latest__item:hover {
     border: 1px solid #00bfe7 !important;
-    /*background: url(../img/blog/blog-1.jpg);
-    background-size: cover;*/
 }
 
 .blog__item.latest__item a {
@@ -2081,7 +2079,6 @@ svg {
 .blog__item:hover {
     border: 1px solid transparent !important;
     background-color: rgba(0, 0, 0, 0.8);
-/*    background: url(../img/images/html-css-collage-concept.jpg) no-repeat;*/
     background-size: cover;
 }
 
