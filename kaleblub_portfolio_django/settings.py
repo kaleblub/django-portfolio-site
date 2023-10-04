@@ -159,8 +159,7 @@ CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 
-
-if os.environ.get("VERCEL"):
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# if os.environ.get("VERCEL"):
     # Turn on WhiteNoise storage backend that takes care of compressing static files
     # and creating unique names for each versionso they can safely be cached forever.
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
