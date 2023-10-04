@@ -18,11 +18,11 @@
     { "handle": "filesystem" },
     {
       "src": "/static/(.*)",
-      "dest": "/static///$1"
+      "dest": "/static/$1"
     },
     {
       "src": "/(.*)",
-      "dest": "kaleblub_portfolio_django"
+      "dest": "kaleblub_portfolio_django/wsgi.py"
     }
   ]
 }
