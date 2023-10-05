@@ -28,6 +28,7 @@
       "src": "/(.*)",
       "dest": "kaleblub_portfolio_django/wsgi.py"
     }
-  ]
+  ],
+  "outputDirectory": "staticfiles"
 }
 
