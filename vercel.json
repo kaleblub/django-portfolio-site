@@ -17,8 +17,8 @@
   "routes": [
     { "handle": "filesystem" },
     {
-      "src": "/static/(.*)",
-      "dest": "/static/$1"
+      "src": "/vercel/path0/static/(.*)",
+      "dest": "/vercel/path0/static/$1"
     },
     {
       "src": "/media/(.*)", 
