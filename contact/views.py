@@ -5,6 +5,7 @@ from django.template.loader import render_to_string
 
 from .forms import ContactForm
 from dotenv import load_dotenv
+import os
 
 # Load environment variables
 load_dotenv()
