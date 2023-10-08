@@ -128,7 +128,7 @@
                     <div class="counter__item">
                         <div class="counter__item__text">
                             <img src="{% static 'img/icons/ci-1.png' %}" alt="" loading="lazy">
-                            <h2 class="counter_num">5</h2>
+                            <h2 class="counter_num">{{ completed_projects }}</h2>
                             <p>Completed Projects</p>
                         </div>
                     </div>
@@ -155,7 +155,7 @@
                     <div class="counter__item four__item">
                         <div class="counter__item__text">
                             <img src="{% static 'img/icons/blueBlogPost.png' %}" alt="" style="width: 65px" loading="lazy">
-                            <h2 class="counter_num">6</h2>
+                            <h2 class="counter_num">{{ number_of_posts }}</h2>
                             <p>Blog Posts</p>
                         </div>
                     </div>
