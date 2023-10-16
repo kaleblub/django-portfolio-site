@@ -1,3 +1,4 @@
 .env
 serverless_static.py
 staticfiles/*
+env
