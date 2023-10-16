@@ -21,7 +21,7 @@ DEBUG = False
 if DEBUG:
     ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 else:
-    ALLOWED_HOSTS = ['.vercel.app', 'kalebhumpal.dev']
+    ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', 'kalebhumpal.dev']
 
 #Email Contact Setup
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -159,7 +159,13 @@ CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-# if os.environ.get("VERCEL"):
-    # Turn on WhiteNoise storage backend that takes care of compressing static files
-    # and creating unique names for each versionso they can safely be cached forever.
+
+# HTTPS Settings
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+SECURE_SSL_REDIRECT = True
+
+# HSTS Settings
+SECURE_HSTS_SECONDS = 31536000 # 1 year
+SECURE_HSTS_PRELOAD = True
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
