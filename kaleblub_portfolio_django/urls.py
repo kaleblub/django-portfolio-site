@@ -36,6 +36,7 @@ urlpatterns = [
     path('blog/<int:pk>/', blog_views.PostView.as_view(), name='post-detail'),
     path('services/', main_views.services, name='services'),
     path('contact/', contact_views.contact, name='contact'),
+    path('success/', contact_views.successView, name="successView")
 ]
 
 handler404 = 'main.views.error_404_view'
