@@ -139,7 +139,7 @@ USE_TZ = True
 
 
 
-MEDIA_URL = '/media/'
+MEDIA_URL = '/vercel/path0/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
