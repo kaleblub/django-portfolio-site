@@ -138,9 +138,11 @@ USE_I18N = True
 USE_TZ = True
 
 
-
 MEDIA_URL = '/vercel/path0/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+WHITENOISE_USE_FINDERS = True
+WHITENOISE_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+WHITENOISE_MEDIA_PREFIX = '/vercel/path0/media/'
 
 
 # Static files (CSS, JavaScript, Images)
