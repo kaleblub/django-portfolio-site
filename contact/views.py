@@ -15,6 +15,10 @@ def contact(request):
 		form = ContactForm()
 	else:
 		form = ContactForm(request.POST)
+		bot_trap_value = form.cleaned_data.get("bot_trap", "")
+		if bot_trap_value:
+			print("Bot submission detected")
+			return HttpResponseRedirect(success_url)
 		if form.is_valid():
 			print('The form is valid')
 			name = form.cleaned_data["name"]
