@@ -2,6 +2,7 @@ from django.shortcuts import render
 from projects.models import Project
 from blog.models import Post
 import requests, dotenv, os
+from datetime import datetime
 
 from requests.exceptions import HTTPError # new
 
@@ -10,18 +11,12 @@ dotenv.load_dotenv()
 
 def home(request):
 	recent_posts = Post.objects.order_by('-date_posted')[:6]
-	number_of_posts = Post.objects.all().count()
-	completed_projects = Project.objects.all().count()
-	commit_count = get_github_commit_count(os.getenv('GITHUB_USERNAME'), os.getenv('GITHUB_TOKEN'))
 	featured_projects = Project.objects.filter(featured=True)
 
-	context = {
-		'featured_projects': featured_projects,
-		'recent_posts': recent_posts,
-		'number_of_posts': number_of_posts,
-		'commit_count': commit_count,
-		'completed_projects': completed_projects,
-	}
+	context = build_common_context()
+	context['featured_projects'] = featured_projects
+	context['recent_posts'] = recent_posts
+
 	return render(request, 'main/home.html', context)
 
 def services(request):
@@ -30,32 +25,24 @@ def services(request):
 def error_404_view(request, exception):
 	return render(request, 'main/404.html', status=404)
 
-def get_github_commit_count(username, token):
-    access_token = token
-    api_url = f'https://api.github.com/users/{username}/repos'
-    
-    headers = {'Authorization': f'token {access_token}'}
 
-    response = requests.get(api_url, headers=headers)
-    repos = response.json()
 
-    total_commits = 0
+def build_common_context():
+	number_of_posts = Post.objects.all().count()
+	completed_projects = Project.objects.all().count()
+	commit_count = get_commit_estimate()
 
-    for repo in repos:
-        repo_name = repo['name']
-        commits = count_commits(username, repo_name, token)
-        total_commits += commits
+	common_context = {
+		'number_of_posts': number_of_posts,
+		'commit_count': commit_count,
+		'completed_projects': completed_projects,
+	}
+	return common_context
 
-    return total_commits
-
-def count_commits(username, repo_name, token):
-    access_token = token
-    api_url = f'https://api.github.com/repos/{username}/{repo_name}/commits'
-    
-    headers = {'Authorization': f'token {access_token}'}
-    params = {'since': '2000-01-01T00:00:00Z'}  # Adjust the start date as needed
-
-    response = requests.get(api_url, headers=headers, params=params)
-    commits = response.json()
-
-    return len(commits)
+def get_commit_estimate():
+	last_commit_total = 310
+	last_commit_date = datetime.strptime('2023-12-6', '%Y-%m-%d').date()
+	current_date = datetime.now().date()
+	day_difference = (current_date - last_commit_date).days
+	count_increase = day_difference // 2
+	return last_commit_total + count_increase
