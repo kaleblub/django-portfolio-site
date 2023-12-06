@@ -20,8 +20,18 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = False
 if DEBUG:
     ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+    SECURE_SSL_REDIRECT = False
 else:
     ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', 'kalebhumpal.dev']
+    # HTTPS Settings
+    SECURE_SSL_REDIRECT = True
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
+    # HSTS Settings
+    SECURE_HSTS_SECONDS = 31536000 # 1 year
+    SECURE_HSTS_PRELOAD = True
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 
 #Email Contact Setup
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -138,7 +148,7 @@ USE_I18N = True
 USE_TZ = True
 
 
-MEDIA_URL = '/vercel/path0/media/'
+MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 WHITENOISE_USE_FINDERS = True
 WHITENOISE_ROOT = os.path.join(BASE_DIR, 'staticfiles')
@@ -160,14 +170,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 
 CRISPY_TEMPLATE_PACK = "bootstrap5"
-
-
-# HTTPS Settings
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
-SECURE_SSL_REDIRECT = True
-
-# HSTS Settings
-SECURE_HSTS_SECONDS = 31536000 # 1 year
-SECURE_HSTS_PRELOAD = True
-SECURE_HSTS_INCLUDE_SUBDOMAINS = True
