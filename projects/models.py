@@ -1,4 +1,5 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
 
 
 class Language(models.Model):
@@ -12,7 +13,7 @@ class Project(models.Model):
 	short_summary = models.CharField(max_length=250)
 	description = models.TextField()
 	languages_used = models.ManyToManyField('Language', blank=True)
-	cover_image = models.ImageField(upload_to='project_images/')
+	cover_image = CloudinaryField('image')
 	repository_link = models.URLField(null=True, blank=True)
 	live_demo_link = models.URLField(null=True, blank=True)
 	date_created = models.DateTimeField(auto_now_add=True)

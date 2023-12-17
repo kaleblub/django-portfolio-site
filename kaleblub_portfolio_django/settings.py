@@ -1,6 +1,7 @@
 import os
 from pathlib import Path
 import dj_database_url
+import cloudinary, cloudinary.uploader, cloudinary.api
 
 # Load environment variables from .env file
 from dotenv import load_dotenv
@@ -17,7 +18,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 if DEBUG:
     ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
     SECURE_SSL_REDIRECT = False
@@ -147,12 +148,19 @@ USE_I18N = True
 
 USE_TZ = True
 
+cloudinary.config(
+    cloud_name=os.getenv('CLOUDINARY_CLOUD_NAME'),
+    api_key=os.getenv('CLOUDINARY_API_KEY'),
+    api_secret=os.getenv('CLOUDINARY_API_SECRET'),
+)
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 WHITENOISE_USE_FINDERS = True
 WHITENOISE_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-WHITENOISE_MEDIA_PREFIX = '/vercel/path0/media/'
+# WHITENOISE_MEDIA_PREFIX = '/vercel/path0/media/'
 
 
 # Static files (CSS, JavaScript, Images)
