@@ -53,9 +53,15 @@
                         <p>{{ project.short_summary }}</p>
                         <span><em>Languages Used: {{ project.languages_used.all|join:', ' }}</em></span>
                         <div class="btn-group">
-                            <a type="button" class="btn btn-sm btn-outline-secondary" title="Github" href="{{ project.repository_link }}" target="_blank">View</a>
-                            <a type="button" class="btn btn-sm btn-outline-secondary" title="View Demo" href="{{ project.live_demo_link }}" target="_blank">Demo</a>
-                            <a type="button" class="btn btn-sm btn-outline-secondary" title="Download" href="#" target="_blank">Download</a>
+                            {% if project.repository_link != 'None' %}
+                                <a type="button" class="btn btn-sm btn-outline-secondary" title="Github" href="{{ project.repository_link }}" target="_blank">View</a>
+                            {% endif %}
+                            {% if project.live_demo_link != 'None' %}
+                                <a type="button" class="btn btn-sm btn-outline-secondary" title="View Demo" href="{{ project.live_demo_link }}" target="_blank">Demo</a>
+                            {% endif %}
+                            {% if project.download_link == 'None' %}
+                                <a type="button" class="btn btn-sm btn-outline-secondary" title="Download" href="#" target="_blank">Download</a>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
