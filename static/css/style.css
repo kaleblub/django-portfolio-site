@@ -860,6 +860,19 @@ section:nth-child(even) {
     margin-right: 0;
 }
 
+.latest__item .blog__tags {
+    display: flex;
+    overflow-x: hidden;
+    gap: 1px;
+}
+
+.latest__item .blog__tags .blog__tag {
+    background-color: #021d37;
+    color: #ffffff;
+    font-size: 12px;
+    padding: 0.5em 0.75em;
+    height: fit-content;
+}
 /*---------------------
   Call To Action
 -----------------------*/
@@ -1925,12 +1938,12 @@ svg {
     color: #adadad;
 }
 
-.portfolio__item__text ul li:after {
+/* .portfolio__item__text ul li:after {
     position: absolute;
     right: -16px;
     top: 0;
     content: "/";
-}
+} */
 
 .portfolio__item__text ul li:last-child {
     margin-right: 0;
@@ -2109,17 +2122,17 @@ svg {
     list-style: none;
     font-size: 14px;
     font-weight: 300;
-    margin-right: 25px;
+    /* margin-right: 25px; */
     position: relative;
     display: inline-block;
 }
 
-.blog__item ul li:after {
+/* .blog__item ul li:after {
     position: absolute;
     right: -16px;
     top: 0px;
     content: "/";
-}
+} */
 
 .blog__item ul li:last-child {
     margin-right: 0;

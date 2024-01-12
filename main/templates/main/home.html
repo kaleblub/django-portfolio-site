@@ -187,6 +187,11 @@
                             <!-- <li>MAYBE LIKES HERE?</li> -->
                         </ul>
                         <p>{{ post.summary }}</p>
+                        <ul class="blog__tags">
+                            {% for tag in post.tags.all %}
+                            <li class="blog__tag">{{tag}}</li>
+                            {% endfor %}
+                        </ul>
                         <a href="{% url 'post-detail' post.id %}">Read more <span class="arrow_right"></a>
                         <!-- </div> -->
                     </div>
