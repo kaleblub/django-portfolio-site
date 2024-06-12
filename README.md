@@ -10,7 +10,7 @@ This Django website showcases my portfolio projects and skills. It features user
 - **Contact Form**: Functional contact page that will send an email to me and filter out spammers.
 
 ## Live Demo
-Check out the live demo: [Your Portfolio Website](https://kalebhumpal.dev)
+Check out the live demo: [kalebhumpal.dev](https://kalebhumpal.dev)
 
 ## Screenshots
 Home Page:
