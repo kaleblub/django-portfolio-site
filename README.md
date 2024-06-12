@@ -1,65 +1,52 @@
-# django-portfolio-site
-My portfolio site that houses my projects and personal blog that follows my journey through learning in the field of Computer Science, Programming, Cyber Security, etc.
+# Project Title: Django Portfolio Website
 
-## Table of Contents
-
-- [About](#about)
-- [Features](#features)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Usage](#usage)
-- [Portfolio](#portfolio)
-- [Blog](#blog)
-- [Contact](#contact)
-- [License](#license)
-
-## About
-
-[Provide a brief introduction to your project. Explain its purpose and what it aims to achieve. Mention your role as a software developer and any technologies or frameworks you've used.]
+## Project Description
+This Django website showcases my portfolio projects and skills. It features user authentication, a project gallery, and a contact form. Designed with responsiveness in mind, it offers a seamless experience across devices.
 
 ## Features
+- **Django Admin Interface**: A basic setup using Django's built-in admin functionality to manage portfolio projects and categories.
+- **Project Filtering**: Allows users to filter portfolio projects by programming language or technology, making it easier to find relevant examples.
+- **Responsive Design**: The website is designed to be fully responsive, providing a seamless experience across desktop and mobile devices.
+- **Contact Form**: Functional contact page that will send an email to me and filter out spammers.
 
-[Highlight the key features of your portfolio site. This section can include information about the technologies you've used, any unique functionalities, or any notable design elements.]
+## Live Demo
+Check out the live demo: [Your Portfolio Website](https://kalebhumpal.dev)
 
-## Getting Started
+## Screenshots
+Home Page:
+![Screenshot_20240612_182440](https://github.com/kaleblub/django-portfolio-site/assets/28329219/802d3b11-eaba-4ece-bb7a-9310c2764fe5)
+Projects Page:
+![Screenshot_20240612_183527](https://github.com/kaleblub/django-portfolio-site/assets/28329219/3dbe01fe-ea52-47d4-b048-182d33abd94b)
 
-[Provide instructions for setting up your project locally. This section should help users understand how to run your site on their own machines.]
 
-### Prerequisites
+## Technologies Used
+- **Django**: Backend framework
+- **Bootstrap**: CSS framework for responsive design
+- **JavaScript**: For interactive elements
+- **SQLite**: Default database for development
 
-[List any software, tools, or dependencies that users need to install or configure before they can run your project. Include links to installation guides if necessary.]
-
-### Installation
-
-[Provide step-by-step instructions for installing and running your project. Include any setup commands or configuration files users need to know about.]
-
-## Usage
-
-[Explain how users can interact with your portfolio site. Provide information on navigation, how to view your portfolio, read your blog, and contact you. Include any special features or functionality users should be aware of.]
-
-## Portfolio
-
-[Include screenshots or descriptions of some of your best portfolio projects. Explain the technologies used and the problems each project solves.]
-
-## Blog
-
-[If applicable, provide links or summaries of some of your blog posts. You can include the titles, publication dates, and brief descriptions to give users an idea of your writing style and topics covered.]
-
-## Contact
-
-[Provide ways for users to get in touch with you, such as your email address or links to your social media profiles.]
-
-## License
-
-[Specify the license under which your project is distributed. You can choose an open-source license or any other license that suits your project.]
-
----
-
-[Optional: Add any badges or acknowledgments for contributors or libraries used.]
-
-[Optional: Include a section on future plans or development roadmap.]
-
-[Optional: Add any additional sections that you think are relevant to your project.]
-
-Thank you for checking out my software developer portfolio site! Feel free to explore my work and get in touch if you have any questions or opportunities for collaboration.
+## Installation (Optional)
+To explore the code locally, follow these basic steps:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/your-repo-name.git
+   ```
+2. Navigate into the project directory:
+  ```bash
+  cd your-repo-name
+  ```
+3. Set up a virtual environment and install dependencies:
+  ```bash
+  python -m venv venv
+  source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+  pip install -r requirements.txt
+  ```
+4. Apply database migrations:
+  ```bash
+  python manage.py migrate
+  ```
+5. Run the development server:
+  ```bash
+  python manage.py runserver
+  ```
+6. Access the website: Open your browser and go to `http://127.0.0.1:8000/`.
